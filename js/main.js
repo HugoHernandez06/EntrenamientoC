@@ -1,4 +1,3 @@
-    <script>
     var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
     var secciones = [];
     var btn_login;
@@ -16,8 +15,6 @@
     var btn_ajustes;
     var btn_ajustesCuenta;
     var cerrarSecion;
-
-
 
 
     window.onload = ()=>
@@ -66,12 +63,6 @@
       btn_ajustesCuenta=document.getElementById("btn_ajustesCuenta");
       btn_cerrarSecion=document.getElementById("btn_cerrarSecion");
       btn_cambioDatos=document.getElementById("btn_cambioDatos");
-
-
-
-
-
-
 
 
       //btn_inicio=document.querySelectorAll(".volver");
@@ -124,4 +115,3 @@
      ocultarSecciones();
      seccion.classList.remove("ocultar");
     }
-    </script>
