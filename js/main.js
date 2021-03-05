@@ -1,4 +1,4 @@
-     var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
+    var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
     var secciones = [];
     var btn_login;
     var btn_registro;
@@ -124,10 +124,6 @@
           
         }
 
-      /*for (var i=0;i<=3;i++) 
-        {
-          btn_inicio[i].addEventListener("click",()=>{irA(inicio);});
-        }*/
 
     }
     function ocultarSecciones()
