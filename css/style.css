@@ -1,9 +1,9 @@
-  .boton_personalizado
+ .boton_personalizado
     {
     
       text-decoration: none;
       padding: 10px;
-      font-weight: 600px;
+      font-weight: 600;
       font-size: 20px;
       color: #000000;
       background-color: #89D9D1;
@@ -12,56 +12,71 @@
       width: 100px;
       height: 100px;
     }
+
   .boton
     {
       background-color:#89D9D1 ;
       color:black;
       padding: 10px;
       text-decoration: none;
-      font-weight: 600px;
+      font-weight: 600;
       font-size: 20px;
       border-radius: 6px;
       border: 2px #0016b0;
     }
   .volver
     {
-      margin-left: -330px;
+      margin-left: -327px;
+      line-height: 50px;
+    }
+  .volver1
+    {
+      margin-left: -327px;
       line-height: 50px;
     }
   .volver2
     {
-      margin-left: -330px;
+      margin-left: -327px;
+      line-height: 50px;
+    }
+  .volver3
+    {
+      margin-left: -327px;
+      line-height: 50px;
+    }
+
+  .volver4
+    {
+      margin-left: -327px;
+      line-height: 50px;
+    }
+  .volver5
+    {
+      margin-left: -327px;
+      line-height: 50px;
+    }
+  .volver6
+    {
+      margin-left: -327px;
+      line-height: 50px;
+    }
+
+
+  .ajustes
+    {
+      margin-left: 327px;
       line-height: 50px;
     }
   .ocultar
     {
       display: none;
     }
-
-.panel-central-img{
-     width: 200px;
-     height: 200px;
-     padding: 30px;
-     align: center; 
-     width: inherit;
-   }
-
-.panel-central{
-     width: 200px;
-     height: 50px;
-     padding: 30px;
-     align: center; 
-     width: inherit;
-   }
-
     section
     {
       width:360px;
       height:640px;
       text-align: center;
-      width: inherit;
     }
-
   body
     {
       margin: 0;
