@@ -1,4 +1,4 @@
-    var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
+var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
     var secciones = [];
     var btn_login;
     var btn_registro;
@@ -6,7 +6,6 @@
     var btn_volver, btn_volver1, btn_volver2, btn_volver3, btn_volver4, btn_volver5, btn_volver6; 
     var btn_entrenamiento;
     var btn_cuidados;
-    //var btn_inicio;
     var btn_basico;
     var btn_dieta;
     var btn_misMascotas;
@@ -113,7 +112,7 @@
           btn_volver[i].addEventListener("click",()=>{irA(menuLogin);});
           
         }
-        for (var i=0;i<=4;i++) 
+        for (var i=0;i<=5;i++) 
         {
           btn_volver2[i].addEventListener("click",()=>{irA(inicio);});
           
