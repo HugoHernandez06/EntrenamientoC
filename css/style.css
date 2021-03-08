@@ -71,10 +71,6 @@
       margin-left: -321px;
       text-decoration: none;
       color: black;
-
-
-
-
     }
 
   
@@ -119,6 +115,30 @@
     {
       display: none;
     }
+
+  .panel-central-img{
+     width: 200px;
+     height: 200px;
+     padding: 30px;
+     align: center; 
+     width: inherit;
+   }
+
+  .panel-central{
+     width: 200px;
+     height: 30px;
+     padding: 30px;
+     align: center; 
+     width: inherit;
+   }
+
+  .panel-central-reducido{
+     width: 100px;
+     height: 10px;
+     padding: 20px;
+     align: center; 
+     width: inherit;
+   }
 
 
     section
