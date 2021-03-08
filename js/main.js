@@ -7,7 +7,7 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
     var btn_entrenamiento;
     var btn_cuidados;
     var btn_basico;
-    var btn_dieta;
+    var btn_dieta;  
     var btn_misMascotas;
     var btn_trucos;
     var btn_añadirMascota, btn_guardarM;
@@ -138,3 +138,5 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
      ocultarSecciones();
      seccion.classList.remove("ocultar");
     }
+
+    var contenedor_login_register = document.querySelector(".contenedor_login_register")
