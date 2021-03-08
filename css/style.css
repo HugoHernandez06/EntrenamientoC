@@ -21,6 +21,7 @@
   -webkit-font-smoothing: antialiased;
 }
 .material-icons.cl-white { color: black; }
+
   .boton
     {
       background-color:#89D9D1 ;
@@ -67,7 +68,11 @@
       position: relative;
       top: 1px;
       right: 1px;*/
-       margin-left: -321px;
+      margin-left: -321px;
+      text-decoration: none;
+      color: black;
+
+
 
 
     }
