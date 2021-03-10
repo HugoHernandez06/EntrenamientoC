@@ -146,6 +146,7 @@
       width:360px;
       height:640px;
       text-align: center;
+      width: inherit;
     }
 
   body
