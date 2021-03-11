@@ -1,3 +1,8 @@
+<!--?php
+   require '../php/registro_mascota_be.php'
+
+?-->
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -45,7 +50,6 @@
    </section>
 <!--registro-->
 <section id="registro" class="ocultar" >
-    <!--form  method = "POST"-->
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -67,7 +71,6 @@
       <div class="panel-central-reducido">
       <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
       </div>
-    <!--/form-->
    </section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
@@ -83,8 +86,8 @@
       <div class="panel-central-reducido">
          <input type="text"  placeholder="Añadir Edad"  name="edad" id="edad">
       </div>
-      <div class="panel-central-reducido" name = "raza" id="raza">
-         <select name="menu" >
+      <div class="panel-central-reducido">
+         <select name = "raza" id="raza">
             <option value="0">Añadir Raza......................</option>
             <option value="1">Uno</option>
             <option value="2">Dos</option>

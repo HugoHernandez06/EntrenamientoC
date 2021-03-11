@@ -86,45 +86,53 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
       btn_login.addEventListener("click",()=>{irA(login);});
       btn_registro.addEventListener("click",()=>{irA(registro);});
       btn_enviar.addEventListener("click",()=>{irA(inicio);});
-      /*btn_enviar1.addEventListener("click",()=>{
-        fetch("../php/registro_usuario_be.php", {method:"POST"}).then(r => r.text()).then(r => {
+      
+
+      btn_enviar1.addEventListener("click",()=>{
+          const fd = new FormData();
+          var nombre_completo=document.getElementById("nombre_completo").value;
+          var correo = document.getElementById("correo").value;
+          var usuario = document.getElementById("usuario").value;
+          var contrasena = document.getElementById("contrasena").value;
+
+          fd.append("nombre_completo", nombre_completo); 
+          fd.append("correo", correo );
+          fd.append("usuario", usuario );
+          fd.append("contrasena", contrasena );
+          fetch("../php/registro_usuario_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
             irA(registroMascota);
+
+            alert("Registro exitiso");
+          });
         });
-    });*/
+        
+        btn_enviar2.addEventListener("click",()=>{
+          const fd = new FormData();
+          var nombre_completo=document.getElementById("nombre_mascota").value;
+          var correo = document.getElementById("edad").value;
+          var usuario = document.getElementById("raza").value;
+          var contrasena = document.getElementById("contrasena").value;
 
-    btn_enviar1.addEventListener("click",()=>{
-      const fd = new FormData();
-      var nombre_completo=document.getElementById("nombre_completo").value;
-      var correo = document.getElementById("correo").value;
-      var usuario = document.getElementById("usuario").value;
-      var contrasena = document.getElementById("contrasena").value;
+          fd.append("nombre_mascota", nombre_mascota); 
+          fd.append("edad", edad );
+          fd.append("raza", raza );
+          fetch("../php/registro_mascota_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
+            irA(inicio);
 
-      fd.append("nombre_completo", nombre_completo); 
-      fd.append("correo", correo );
-      fd.append("usuario", usuario );
-      fd.append("contrasena", contrasena );
-      fetch("../php/registro_usuario_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
-          irA(registroMascota);
-
-          alert("Registro exitiso");
-      });
-  });
+            alert("Registro exitiso");
+          });
+        });
     
       
-        
-      
-        
-  
-      
-
-     
 
      
 
 
 
 
-      btn_enviar2.addEventListener("click",()=>{irA(inicio);});
+
+
+
       btn_volver1.addEventListener("click",()=>{irA(registro);});
       btn_volver4.addEventListener("click",()=>{irA(ajustes);});
       btn_volver5.addEventListener("click",()=>{irA(ajustesCuenta);});
