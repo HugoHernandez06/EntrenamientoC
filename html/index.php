@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 <!--?php
 
 require '../php/registro_usuario_be.php';
 
 ?-->
-=======
->>>>>>> 77498149b5e28b68ff1b4e935e433e0d2748137a
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -13,10 +10,7 @@ require '../php/registro_usuario_be.php';
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link REL=StyleSheet HREF="../css/style.css" TYPE="text/css" MEDIA=screen>
       <script language="javascript" src="../js/main.js" type="text/javascript"></script>
-<<<<<<< HEAD
       <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script-->
-=======
->>>>>>> 77498149b5e28b68ff1b4e935e433e0d2748137a
    </head>
 <!--splash-->
    <section id="splash">
@@ -55,13 +49,8 @@ require '../php/registro_usuario_be.php';
       </div>
    </section>
 <!--registro-->
-<<<<<<< HEAD
 <section id="registro" class="ocultar" >
     <form  method = "POST">
-=======
-  <section id="registro" class="ocultar">
-    <!--form action="../php/registro_usuario_be.php" method="POST"-->
->>>>>>> 77498149b5e28b68ff1b4e935e433e0d2748137a
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -81,15 +70,9 @@ require '../php/registro_usuario_be.php';
           <input type="password"  placeholder="Contraseña" name="contrasena">
       </div>
       <div class="panel-central-reducido">
-<<<<<<< HEAD
       <buttton  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</buttton>
       </div>
     </form>
-=======
-      <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
-      </div>
-    <!--/form-->
->>>>>>> 77498149b5e28b68ff1b4e935e433e0d2748137a
    </section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
