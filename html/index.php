@@ -45,7 +45,7 @@
    </section>
 <!--registro-->
 <section id="registro" class="ocultar" >
-    <form  method = "POST">
+    <!--form  method = "POST"-->
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -53,7 +53,7 @@
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
       </div>
       <div class="panel-central-reducido">
-          <input type="text"  placeholder="Nombre Completo" name="nombre_completo" >
+         <form method="POST"><input type="text"  placeholder="Nombre Completo" name="nombre_completo" ></form> 
         </div>
       <div class="panel-central-reducido">
           <input type="text"  placeholder="Correo Electronico"  name="correo">
@@ -65,9 +65,9 @@
           <input type="password"  placeholder="Contraseña" name="contrasena">
       </div>
       <div class="panel-central-reducido">
-      <buttton  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</buttton>
+      <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
       </div>
-    </form>
+    <!--/form-->
    </section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
