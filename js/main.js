@@ -86,7 +86,17 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
       btn_login.addEventListener("click",()=>{irA(login);});
       btn_registro.addEventListener("click",()=>{irA(registro);});
       btn_enviar.addEventListener("click",()=>{irA(inicio);});
-      btn_enviar1.addEventListener("click",()=>{irA(registroMascota);});
+       btn_enviar1.addEventListener("click",()=>{
+        fetch("../php/registro_usuario_be.php").then(r => r.text()).then(response => {
+            irA(registroMascota);
+            console.log(response);
+        }).catch(e => {
+            alert("Error "+e);
+        });
+
+
+
+      
       btn_enviar2.addEventListener("click",()=>{irA(inicio);});
       btn_volver1.addEventListener("click",()=>{irA(registro);});
       btn_volver4.addEventListener("click",()=>{irA(ajustes);});

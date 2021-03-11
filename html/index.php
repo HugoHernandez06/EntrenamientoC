@@ -44,7 +44,7 @@
    </section>
 <!--registro-->
   <section id="registro" class="ocultar">
-    <form action="../php/registro_usuario_be.php" method="POST">
+    <!--form action="../php/registro_usuario_be.php" method="POST"-->
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -64,9 +64,9 @@
           <input type="password"  placeholder="Contraseña" name="contrasena">
       </div>
       <div class="panel-central-reducido">
-      <button  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</button>
+      <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
       </div>
-    </form>
+    <!--/form-->
    </section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
