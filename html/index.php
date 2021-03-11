@@ -1,8 +1,3 @@
-<!--?php
-
-require '../php/registro_usuario_be.php';
-
-?-->
 <!DOCTYPE html>
 <html lang="en">
    <head>
