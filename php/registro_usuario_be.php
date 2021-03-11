@@ -13,18 +13,5 @@
     
     $ejecutar = mysqli_query($conexion, $query);
 
-    if($ejecutar){
-        echo '
-        <script>
-        alert("Usuario registrado exitosamentre");
-        btn_enviar1.addEventListener("click",()=>{irA(registroMascota);});
-        </script>
-        
-        
-        
-        ';
-    }
-
-
 
 ?>
