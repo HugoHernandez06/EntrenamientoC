@@ -1,4 +1,4 @@
-  @font-face {
+@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
@@ -20,24 +20,27 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-.material-icons.cl-white { color: black; }
 
-  .boton
-    {
-      background-color:#89D9D1 ;
-      color:black;
-      padding: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 20px;
-      border-radius: 6px;
-      border: 2px #0016b0;
-      display: block;
-      width: 43%;
-      margin: 0 auto; 
+.material-icons.cl-white {
+  color: black;
+}
 
-    }
-    /*.boton button{
+.boton {
+  background-color: #89D9D1;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 2px #0016b0;
+  display: block;
+  width: 43%;
+  margin: 0 auto;
+}
+
+
+/*.boton button{
       padding: 10px 40px;
       border: 2px solid #89D9D1;
       background: transparent;;
@@ -51,9 +54,11 @@
       background: #fff;
       color: #89D9D1;
     }*/
-  .volver, .volver2, .volver3
-    {
-      /*background-color:#89D9D1;
+
+.volver,
+.volver2,
+.volver3 {
+  /*background-color:#89D9D1;
       color:black;
       padding: 3.4px;
       text-decoration: none;
@@ -68,139 +73,155 @@
       position: relative;
       top: 1px;
       right: 1px;*/
-      margin-left: -321px;
-      text-decoration: none;
-      color: black;
+  margin-left: -321px;
+  text-decoration: none;
+  color: black;
+}
 
+.boton_añadir {
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+  background-color: #89D9D1;
+  border-radius: 6px;
+  border: 2px #0016b0;
+  width: 100px;
+  height: 100px;
+}
 
-
-
-    }
-
-  
-  .boton_añadir
-    {
-    
-      text-decoration: none;
-      padding: 10px;
-      font-weight: 600;
-      font-size: 20px;
-      color: #000000;
-      background-color: #89D9D1;
-      border-radius: 6px;
-      border: 2px #0016b0;
-      width: 100px;
-      height: 100px;
-    }
-
-    
-
-  .ajustes
-    {
-     background-color:#89D9D1;
-      color:black;
-      padding: 3.4px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 30px;
-      border-radius: 6px;
-      border: 2px #0016b0;
-      margin-left: 321px;
-      line-height: 10px;
-      display: block;
-      width: 9%;
-      position: relative;
-      top: 1px;
-      right: 1px;
-      /*background-color: transparent;
+.ajustes {
+  background-color: #89D9D1;
+  color: black;
+  padding: 3.4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 30px;
+  border-radius: 6px;
+  border: 2px #0016b0;
+  margin-left: 321px;
+  line-height: 10px;
+  display: block;
+  width: 9%;
+  position: relative;
+  top: 1px;
+  right: 1px;
+  /*background-color: transparent;
       border-color: transparent;*/
-    }
-  .ocultar
-    {
-      display: none;
-    }
+}
 
+.ocultar {
+  display: none;
+}
 
-    section
-    {
-      width:360px;
-      height:640px;
-      text-align: center;
-    }
+.panel-central-img {
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  align: center;
+  width: inherit;
+}
 
-  body
-    {
-      margin: 0;
-    }
-  #splash
-    {
-    background:#F2ECD8;
-    }
-  #menuLogin
-    {
-      background:#F2ECD8;
-    }
-  #login
-    {
-      background:#F2ECD8;
-    }
-  #registro
-    {
-      background:#F2ECD8;
-    }
-  #registroMascota
-    {
-      background:#F2ECD8;
-    }  
-  #inicio
-    {
-      /*position: relative;
+.panel-central {
+  width: 200px;
+  height: 30px;
+  padding: 30px;
+  align: center;
+  width: inherit;
+}
+
+.panel-central-reducido {
+  width: 100px;
+  height: 10px;
+  padding: 20px;
+  align: center;
+  width: inherit;
+}
+
+.pantallas-info {
+  HEIGHT: 430px;
+  WIDTH: 320px;
+}
+
+section {
+  width: 360px;
+  height: 640px;
+  text-align: center;
+  width: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+#splash {
+  background: #F2ECD8;
+}
+
+#menuLogin {
+  background: #F2ECD8;
+}
+
+#login {
+  background: #F2ECD8;
+}
+
+#registro {
+  background: #F2ECD8;
+}
+
+#registroMascota {
+  background: #F2ECD8;
+}
+
+#inicio {
+  /*position: relative;
       min-height: 100vh;
       border: 1px solid black; */
-      background:#F2ECD8;
-      /*display: flex;
+  background: #F2ECD8;
+  /*display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;*/
-    }
-  #cuidados
-    {
-      background:#F2ECD8;
-    }
-  #dieta
-    {
-      background:#F2ECD8;
-    }
-  #entrenamiento
-   {
-      background:#F2ECD8;
-    }
-  #basico
-    {
-      background:#F2ECD8;
-    }
-  #trucos
-    {
-      background:#F2ECD8;
-    }
-  #misMascotas
-    {
-      background:#F2ECD8;
-    }
-  #añadirMascota
-    {
-      background:#F2ECD8;
-    }
-  #ajustes
-    {
-      background:#F2ECD8;
-    }
-   #ajustesCuenta
-    {
-      background:#F2ECD8;
-    }  
-  #cambioDatos
-    {
-      background:#F2ECD8;
-    }
-  
+}
+
+#cuidados {
+  background: #F2ECD8;
+}
+
+#dieta {
+  background: #F2ECD8;
+}
+
+#entrenamiento {
+  background: #F2ECD8;
+}
+
+#basico {
+  background: #F2ECD8;
+}
+
+#trucos {
+  background: #F2ECD8;
+}
+
+#misMascotas {
+  background: #F2ECD8;
+}
+
+#añadirMascota {
+  background: #F2ECD8;
+}
+
+#ajustes {
+  background: #F2ECD8;
+}
+
+#ajustesCuenta {
+  background: #F2ECD8;
+}
+
+#cambioDatos {
+  background: #F2ECD8;
+}
