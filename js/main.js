@@ -163,5 +163,3 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
      ocultarSecciones();
      seccion.classList.remove("ocultar");
     }
-
-    var contenedor_login_register = document.querySelector(".contenedor_login_register")
