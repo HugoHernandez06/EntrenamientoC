@@ -94,10 +94,7 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
             alert("Error "+e);
         });
     });
-      /*if(addEventListener="registroMascota"){
-        require('../php/registro_usuario_be.php');
-      }*/
-        
+    
       
         
       
