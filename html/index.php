@@ -45,28 +45,30 @@
    </section>
 <!--registro-->
 <section id="registro" class="ocultar" >
-      <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
-      arrow_back
-      </span></a>
-      <div class="panel-central-img">
-         <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
-      </div>
-      <div class="panel-central-reducido">
-          <input type="text"  placeholder="Nombre Completo" name="nombre_completo" >
-        </div>
-      <div class="panel-central-reducido">
-          <input type="text"  placeholder="Correo Electronico"  name="correo">
-      </div>
-      <div class="panel-central-reducido">
-          <input type="text"  placeholder="Usuario" name="usuario">
-      </div>
-      <div class="panel-central-reducido">
-          <input type="password"  placeholder="Contraseña" name="contrasena">
-      </div>
-      <div class="panel-central-reducido">
+   <!--form  method = "POST"-->
+   <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
+   arrow_back
+   </span></a>
+   <div class="panel-central-img">
+      <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
+   </div>
+   <div class="panel-central-reducido">
+      <input type="text"  placeholder="Nombre Completo" name="nombre_completo" method="post" >
+   </div>
+   <div class="panel-central-reducido">
+      <input type="text"  placeholder="Correo Electronico"  name="correo">
+   </div>
+   <div class="panel-central-reducido">
+      <input type="text"  placeholder="Usuario" name="usuario">
+   </div>
+   <div class="panel-central-reducido">
+      <input type="password"  placeholder="Contraseña" name="contrasena">
+   </div>
+   <div class="panel-central-reducido">
       <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
-      </div>
-   </section>
+   </div>
+   <!--/form-->
+</section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
       <a href="javascript:void(0);" class="volver" id="btn_volver1"><span class="material-icons cl-black">
