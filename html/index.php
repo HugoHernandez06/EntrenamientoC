@@ -50,7 +50,6 @@ require '../php/registro_usuario_be.php';
    </section>
 <!--registro-->
 <section id="registro" class="ocultar" >
-    <form  method = "POST">
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -70,9 +69,8 @@ require '../php/registro_usuario_be.php';
           <input type="password"  placeholder="Contraseña" name="contrasena">
       </div>
       <div class="panel-central-reducido">
-      <buttton  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</buttton>
+      <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
       </div>
-    </form>
    </section>
 <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
