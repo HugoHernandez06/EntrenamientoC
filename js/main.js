@@ -105,7 +105,7 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
             alert("Registro exitoso");
           });
         });
-        
+
         btn_enviar2.addEventListener("click",()=>{
           const fd = new FormData();
           var nombre_completo=document.getElementById("nombre_mascota").value;
@@ -183,5 +183,3 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
      ocultarSecciones();
      seccion.classList.remove("ocultar");
     }
-
-  

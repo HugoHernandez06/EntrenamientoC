@@ -1,8 +1,3 @@
-<!--?php
-   require '../php/registro_mascota_be.php'
-
-?-->
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -87,7 +82,7 @@
          <input type="text"  placeholder="Añadir Edad"  name="edad" id="edad">
       </div>
       <div class="panel-central-reducido">
-         <select name = "raza" id="raza">
+         <select name="raza" id="raza">
             <option value="0">Añadir Raza......................</option>
             <option value="1">Uno</option>
             <option value="2">Dos</option>
