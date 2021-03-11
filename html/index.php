@@ -53,16 +53,16 @@
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
       </div>
       <div class="panel-central-reducido">
-         <form method="POST"><input type="text"  placeholder="Nombre Completo" name="nombre_completo" ></form> 
+         <input type="text"  placeholder="Nombre Completo" name="nombre_completo" id="nombre_completo">
         </div>
       <div class="panel-central-reducido">
-          <input type="text"  placeholder="Correo Electronico"  name="correo">
+          <input type="text"  placeholder="Correo Electronico"  name="correo" id="correo">
       </div>
       <div class="panel-central-reducido">
-          <input type="text"  placeholder="Usuario" name="usuario">
+          <input type="text"  placeholder="Usuario" name="usuario" id="usuario">
       </div>
       <div class="panel-central-reducido">
-          <input type="password"  placeholder="Contraseña" name="contrasena">
+          <input type="password"  placeholder="Contraseña" name="contrasena" id="contrasena">
       </div>
       <div class="panel-central-reducido">
       <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
@@ -78,13 +78,13 @@
       <a href=""><img src="../img/camera-icon.png" alt="añadir foto" border=""></a>
       <h3>añadir foto</h3>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Añadir Nombre" name="">
+         <input type="text"  placeholder="Añadir Nombre" name="nombre_mascota" id="nombre_mascota">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Añadir Edad"  name="">
+         <input type="text"  placeholder="Añadir Edad"  name="edad" id="edad">
       </div>
-      <div class="panel-central-reducido">
-         <select name="menu">
+      <div class="panel-central-reducido" name = "raza" id="raza">
+         <select name="menu" >
             <option value="0">Añadir Raza......................</option>
             <option value="1">Uno</option>
             <option value="2">Dos</option>

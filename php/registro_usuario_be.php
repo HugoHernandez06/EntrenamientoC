@@ -13,5 +13,7 @@
     
     $ejecutar = mysqli_query($conexion, $query);
 
+    mysqli_close($conexion);
+
 
 ?>

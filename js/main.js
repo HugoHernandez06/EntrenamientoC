@@ -86,14 +86,29 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
       btn_login.addEventListener("click",()=>{irA(login);});
       btn_registro.addEventListener("click",()=>{irA(registro);});
       btn_enviar.addEventListener("click",()=>{irA(inicio);});
-      btn_enviar1.addEventListener("click",()=>{
-        fetch("../php/registro_usuario_be.php", {method:'post'}).then(r => r.text()).then(response => {
+      /*btn_enviar1.addEventListener("click",()=>{
+        fetch("../php/registro_usuario_be.php", {method:"POST"}).then(r => r.text()).then(r => {
             irA(registroMascota);
-            console.log(response);
-        }).catch(e => {
-            alert("Error "+e);
         });
-    });
+    });*/
+
+    btn_enviar1.addEventListener("click",()=>{
+      const fd = new FormData();
+      var nombre_completo=document.getElementById("nombre_completo").value;
+      var correo = document.getElementById("correo").value;
+      var usuario = document.getElementById("usuario").value;
+      var contrasena = document.getElementById("contrasena").value;
+
+      fd.append("nombre_completo", nombre_completo); 
+      fd.append("correo", correo );
+      fd.append("usuario", usuario );
+      fd.append("contrasena", contrasena );
+      fetch("../php/registro_usuario_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
+          irA(registroMascota);
+
+          alert("Registro exitiso");
+      });
+  });
     
       
         
