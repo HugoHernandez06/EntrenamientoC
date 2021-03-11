@@ -1,3 +1,8 @@
+<!--?php
+
+require '../php/registro_usuario_be.php';
+
+?-->
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -5,14 +10,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link REL=StyleSheet HREF="../css/style.css" TYPE="text/css" MEDIA=screen>
       <script language="javascript" src="../js/main.js" type="text/javascript"></script>
+      <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script-->
    </head>
-   <!--splash-->
+<!--splash-->
    <section id="splash">
       <br>
       <h1>Splash de la app</h1>
       <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>        
    </section>
-   <!--menu login-->
+<!--menu login-->
    <section id="menuLogin" class="ocultar">
       <div class="panel-central-img">
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
@@ -24,7 +30,7 @@
          <a class="boton" href="javascript:void(0);" id="btn_registro" >Registro</a>
       </div>
    </section>
-   <!--login-->
+<!--login-->
    <section id="login" class="ocultar">
       <a href="javascript:void(0);" class="volver" id="btn_volver" ><span class="material-icons cl-black">
       arrow_back
@@ -42,8 +48,9 @@
          <a class="boton" href="javascript:void(0);" id="btn_enviar">Enviar</a>
       </div>
    </section>
-   <!--registro-->
-   <section id="registro" class="ocultar">
+<!--registro-->
+<section id="registro" class="ocultar" >
+    <form  method = "POST">
       <a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
       arrow_back
       </span></a>
@@ -51,22 +58,23 @@
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Nombre" name="Usuario">
+          <input type="text"  placeholder="Nombre Completo" name="nombre_completo" >
+        </div>
+      <div class="panel-central-reducido">
+          <input type="text"  placeholder="Correo Electronico"  name="correo">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Apellido"  name="Clave">
+          <input type="text"  placeholder="Usuario" name="usuario">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Usuario" name="Usuario">
+          <input type="password"  placeholder="Contraseña" name="contrasena">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Password" name="Usuario">
+      <buttton  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</buttton>
       </div>
-      <div class="panel-central-reducido">
-         <a class="boton" href="javascript:void(0);" id="btn_enviar1">Guardar</a>
-      </div>
+    </form>
    </section>
-   <!--registro mascota-->
+<!--registro mascota-->
    <section id="registroMascota" class="ocultar">
       <a href="javascript:void(0);" class="volver" id="btn_volver1"><span class="material-icons cl-black">
       arrow_back
@@ -92,7 +100,7 @@
          <a class="boton" href="javascript:void(0);" id="btn_enviar2">Guardar</a>
       </div>
    </section>
-   <!--cambio datos-->
+<!--cambio datos-->
    <section id="cambioDatos" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver5"><span class="material-icons cl-black">
       arrow_back
@@ -116,7 +124,7 @@
          <a class="boton" href="javascript:void(0);" id="btn_guardarCD">Guardar</a>
       </div>
    </section>
-   <!--inicio-->
+<!--inicio-->
    <section id="inicio" class="ocultar">
       <a  class = "ajustes" href="javascript:void(0);" id="btn_ajustes"><span class="material-icons cl-black">
       settings</span></a>
@@ -134,7 +142,7 @@
       <div class="panel-central-reducido">
       <a class="boton" href="javascript:void(0);" id="btn_misMascotas">Mis mascotas</a>
    </section>
-   <!--cuidados-->
+<!--cuidados-->
    <section id="cuidados" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
       arrow_back
@@ -143,7 +151,7 @@
       <h1>Cuidados</h1>
       <input type="text" class="pantallas-info" readonly = »readonly»>
    </section>
-   <!--dieta-->
+<!--dieta-->
    <section id="dieta" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
       arrow_back
@@ -152,7 +160,7 @@
       <h1>Dieta</h1>
       <input type="text" class="pantallas-info" readonly = »readonly»>
    </section>
-   <!--entrenamiento-->
+<!--entrenamiento-->
    <section id="entrenamiento" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
       arrow_back
@@ -171,7 +179,7 @@
       <div class="panel-central-reducido">
       <a class="boton" href="javascript:void(0);" id="btn_trucos">Trucos</a>
    </section>
-   <!--basico-->
+<!--basico-->
    <section id="basico" class="ocultar">
       <a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
       arrow_back
@@ -180,7 +188,7 @@
       <h1>Basico</h1>
       <input type="text" class="pantallas-info" readonly = »readonly»>
    </section>
-   <!--trucos-->
+<!--trucos-->
    <section id="trucos" class="ocultar">
       <a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
       arrow_back
@@ -189,7 +197,7 @@
       <h1>Trucos</h1>
       <input type="text" class="pantallas-info" readonly = »readonly»>
    </section>
-   <!--mismascotas-->
+<!--mismascotas-->
    <section id="misMascotas" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
       arrow_back
@@ -213,7 +221,7 @@
       <h2>
       Añadir mascota<h2\>
    </section>
-   <!--añadirmascota-->
+<!--añadirmascota-->
    <section id="añadirMascota" class="ocultar">
       <a href="javascript:void(0);" class="volver" id="btn_volver6"><span class="material-icons cl-black">
       arrow_back
@@ -239,7 +247,7 @@
          <a class="boton" href="javascript:void(0);" id="btn_guardarM">Guardar</a>
       </div>
    </section>
-   <!--ajustes-->
+<!--ajustes-->
    <section id="ajustes" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
       arrow_back
@@ -255,7 +263,7 @@
          <a class="boton" href="javascript:void(0);" id="btn_cerrarSecion">Cerrar sesion</a>
       </div>
    </section>
-   <!--ajustes cuenta-->
+<!--ajustes cuenta-->
    <section id="ajustesCuenta" class="ocultar">
       <a href="javascript:void(0);" class="volver" id="btn_volver4"><span class="material-icons cl-black">
       arrow_back
