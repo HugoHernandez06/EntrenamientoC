@@ -1,4 +1,4 @@
-var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
+   var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas,añadirMascota, ajustes, ajustesCuenta, cambioDatos; 
     var secciones = [];
     var btn_login;
     var btn_registro;
@@ -105,15 +105,15 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
             alert("Registro exitoso");
           });
         });
-        
+
         btn_enviar2.addEventListener("click",()=>{
           const fd = new FormData();
-          var nombre_completo=document.getElementById("nombre_mascota").value;
-          var correo = document.getElementById("edad").value;
-          var usuario = document.getElementById("raza").value;
-          var contrasena = document.getElementById("contrasena").value;
+          var nombre_Mascota=document.getElementById("nombre_Mascota").value;
+          var edad = document.getElementById("edad").value;
+          var raza = document.getElementById("raza").value;
+          
 
-          fd.append("nombre_mascota", nombre_mascota); 
+          fd.append("nombre_Mascota", nombre_Mascota); 
           fd.append("edad", edad );
           fd.append("raza", raza );
           fetch("../php/registro_mascota_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {

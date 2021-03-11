@@ -1,7 +1,7 @@
-<!--?php
+<?php
    require '../php/registro_mascota_be.php'
 
-?-->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,13 +81,14 @@
       <a href=""><img src="../img/camera-icon.png" alt="añadir foto" border=""></a>
       <h3>añadir foto</h3>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Añadir Nombre" name="nombre_mascota" id="nombre_mascota">
+         <input type="text"  placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
       </div>
       <div class="panel-central-reducido">
          <input type="text"  placeholder="Añadir Edad"  name="edad" id="edad">
       </div>
+      <input type="text"  placeholder="Añadir raza"  name="raza" id="raza">
       <div class="panel-central-reducido">
-         <select name = "raza" id="raza">
+         <select>
             <option value="0">Añadir Raza......................</option>
             <option value="1">Uno</option>
             <option value="2">Dos</option>
