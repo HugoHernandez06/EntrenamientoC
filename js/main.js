@@ -102,7 +102,7 @@ var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta
           fetch("../php/registro_usuario_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
             irA(registroMascota);
 
-            alert("Registro exitiso");
+            alert("Registro exitoso");
           });
         });
         
