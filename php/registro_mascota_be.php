@@ -1,13 +1,13 @@
 <?php
 
     include 'conexion_be.php';
-    $nombre_mascota = $_POST['nombre_mascota'];
-    $edad = $_POST['edad'];
+    $nombre_Mascota =$_POST['nombre_Mascota'];
+    $edad= $_POST['edad'];
     $raza = $_POST['raza'];
     
     
-    $query = "INSERT INTO mascotas(nombre_mascota, edad, raza)
-              VALUES('$nombre_mascota','$edad','$raza')";
+    $query = "INSERT INTO mascotas(nombre_Mascota, edad, raza)
+              VALUES('$nombre_Mascota','$edad','$raza')";
     
     
     

@@ -1,14 +1,9 @@
-<?php
-   require '../php/registro_mascota_be.php'
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link REL=StyleSheet HREF="../css/style.css" TYPE="text/css" MEDIA=screen>
+      <link REL=StyleSheet HREF="../css/main.css" TYPE="text/css" MEDIA=screen>
       <script language="javascript" src="../js/main.js" type="text/javascript"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
    </head>
@@ -57,16 +52,17 @@
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Nombre Completo" name="nombre_completo" id="nombre_completo">
+         <input type="text"  placeholder="Nombre Completo" name="nombre_completo" id="nombre_completo" required>
         </div>
       <div class="panel-central-reducido">
-          <input type="text"  placeholder="Correo Electronico"  name="correo" id="correo">
+          <input type="text"  placeholder="Correo Electronico"  name="correo" id="correo" required>
+      </div>
+
+      <div class="panel-central-reducido">
+          <input type="text"  placeholder="Usuario" name="usuario" id="usuario" required>
       </div>
       <div class="panel-central-reducido">
-          <input type="text"  placeholder="Usuario" name="usuario" id="usuario">
-      </div>
-      <div class="panel-central-reducido">
-          <input type="password"  placeholder="Contraseña" name="contrasena" id="contrasena">
+          <input type="password"  placeholder="Contraseña" name="contrasena" id="contrasena" required>
       </div>
       <div class="panel-central-reducido">
       <a  class="boton" href="javascript:void(0);" id="btn_enviar1" >Guardar</a>
@@ -84,11 +80,10 @@
          <input type="text"  placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Añadir Edad"  name="edad" id="edad">
+         <input type="number"  placeholder="Añadir Edad"  name="edad" id="edad">
       </div>
-      <input type="text"  placeholder="Añadir raza"  name="raza" id="raza">
       <div class="panel-central-reducido">
-         <select>
+         <select name="raza" id="raza">
             <option value="0">Añadir Raza......................</option>
             <option value="1">Uno</option>
             <option value="2">Dos</option>
@@ -141,6 +136,7 @@
       <div class="panel-central-reducido">
       <a class="boton" href="javascript:void(0);" id="btn_misMascotas">Mis mascotas</a>
    </section>
+      </div>
 <!--cuidados-->
    <section id="cuidados" class="ocultar">
       <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
@@ -148,7 +144,7 @@
       </span></a>
       <br>
       <h1>Cuidados</h1>
-      <input type="text" class="pantallas-info" readonly = »readonly»>
+      <input type="text" class="pantallas-info" readonly = »readonly» placeholder="Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32">
    </section>
 <!--dieta-->
    <section id="dieta" class="ocultar">
