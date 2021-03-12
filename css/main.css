@@ -1,6 +1,4 @@
-
 @charset "UTF-8";
-
 .boton {
   background-color: #89D9D1;
   color: black;
@@ -14,34 +12,27 @@
   width: 43%;
   margin: 0 auto;
   cursor: pointer;
-  box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
-  transition: all ease 0.2s;
-  }
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  transition: all ease 0.2s; }
 
-  .boton:before{
-    left: -48%;
-  }
-   
-  .boton:hover{
-    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-    background:#12C987
-  }
-   
-  .boton:hover:after,
-  .boton:hover:before{
-    transform: rotate(45deg), scaleX(130%);
-    background: rgba(255,255,255,0.1);
-    transition: all ease 0.2s;
-  }
-   
-  .boton:hover:after{
-    right: 130%;
-  }
-   
-  .boton:hover:before{
-    left: 130%;
-  }
-  
+.boton:before {
+  left: -48%; }
+
+.boton:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: #12C987; }
+
+.boton:hover:after,
+.boton:hover:before {
+  transform: rotate(45deg), scaleX(130%);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all ease 0.2s; }
+
+.boton:hover:after {
+  right: 130%; }
+
+.boton:hover:before {
+  left: 130%; }
 
 .volver,
 .volver2,
@@ -62,8 +53,7 @@
   width: 100px;
   height: 100px; }
 
-.ajustes 
-{
+.ajustes {
   background-color: #89D9D1;
   color: black;
   padding: 3.4px;
@@ -78,8 +68,7 @@
   width: 9%;
   position: relative;
   top: 1px;
-  right: 1px;
-}
+  right: 1px; }
 
 .ocultar {
   display: none; }
@@ -157,7 +146,14 @@ body {
   background: #F2ECD8; }
 
 #inicio {
-  background: #F2ECD8; }
+  /*position: relative;
+      min-height: 100vh;
+      border: 1px solid black; */
+  background: #F2ECD8;
+  /*display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;*/ }
 
 #cuidados {
   background: #F2ECD8; }
