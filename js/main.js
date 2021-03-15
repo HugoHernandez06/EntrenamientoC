@@ -16,8 +16,6 @@
     var btn_cerrarSecion;
     var btn_cambioDatos, btn_guardarCD;
 
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js";
-
 
 
     window.onload = ()=>
@@ -92,59 +90,8 @@
       
 
 
-      btn_enviar1.addEventListener("click",()=>{
-          var nombre_completo=document.getElementById("nombre_completo").value;
-          var correo = document.getElementById("correo").value;
-          var usuario = document.getElementById("usuario").value;
-          var contrasena = document.getElementById("contrasena").value;
-          
-          
-        $.ajax({
-          type: "POST",
-          url: "../php/registro_usuario_be.php",
-          data: { "nombre_completo" :  nombre_completo ,"correo":correo, "usuario":usuario, "contrasena":contrasena},
-          success: function(data){
-          
-              
-          }
-      });
-      irA(registroMascota);
-        /*if(-1>0)
-        {
-            alert("este correo ya esta registrado");          
-            irA(registro);
-        }else
-        {
-          irA(registroMascota);
-        }*/
-      
-        });
-
-        btn_enviar2.addEventListener("click",()=>{
-          const fd = new FormData();
-          var nombre_Mascota=document.getElementById("nombre_Mascota").value;
-          var edad = document.getElementById("edad").value;
-          var raza = document.getElementById("raza").value;
-          
-
-          fd.append("nombre_Mascota", nombre_Mascota); 
-          fd.append("edad", edad );
-          fd.append("raza", raza );
-          fetch("../php/registro_mascota_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
-            irA(inicio);
-
-            alert("Registro exitiso");
-          });
-        });
-    
-      
-
-     
-
-
-
-
-
+      btn_enviar1.addEventListener("click",()=>{irA(registroMascota); });
+      btn_enviar2.addEventListener("click",()=>{ irA(inicio);});
 
 
       btn_volver1.addEventListener("click",()=>{irA(registro);});
@@ -197,48 +144,4 @@
      ocultarSecciones();
      seccion.classList.remove("ocultar");
     }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-            
-              
-
-
-          /*const fd = new FormData();
-          var nombre_completo=document.getElementById("nombre_completo").value;
-          var correo = document.getElementById("correo").value;
-          var usuario = document.getElementById("usuario").value;
-          var contrasena = document.getElementById("contrasena").value;
-
-          fd.append("nombre_completo", nombre_completo); 
-          fd.append("correo", correo );
-          fd.append("usuario", usuario );
-          fd.append("contrasena", contrasena );*/
-
-        
-         
-        
-
-        
-
-         //if(1 >0){
-          /*fetch("../php/registro_usuario_be.php", {body:fd, method:"POST"}).then(r => r.text()).then(r => {
-            irA(registroMascota);
-
-            alert("Registro exitoso");
-          });
-        /* }else{
-            irA(registro);
-         
-        }*/
+     
