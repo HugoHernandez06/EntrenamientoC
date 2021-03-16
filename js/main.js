@@ -18,6 +18,7 @@
 
 
 
+
     window.onload = ()=>
     {
       crearReferencias();
@@ -90,8 +91,21 @@
       
 
 
-      btn_enviar1.addEventListener("click",()=>{irA(registroMascota); });
-      btn_enviar2.addEventListener("click",()=>{ irA(inicio);});
+      btn_enviar1.addEventListener("click",()=>{
+        
+        if(verificar_Datos()==true && verficar_Correo()==true)
+        {
+          irA(registroMascota);
+        }
+       
+        
+        
+      
+       });
+      btn_enviar2.addEventListener("click",()=>{
+         registro_Usuario();
+         registro_Mascota();
+         irA(inicio);});
 
 
       btn_volver1.addEventListener("click",()=>{irA(registro);});
@@ -105,7 +119,9 @@
       btn_misMascotas.addEventListener("click",()=>{irA(misMascotas);});
       btn_trucos.addEventListener("click",()=>{irA(trucos);});
       btn_añadirMascota.addEventListener("click",()=>{irA(añadirMascota);});
-      btn_guardarM.addEventListener("click",()=>{irA(inicio);});
+      btn_guardarM.addEventListener("click",()=>{
+        añadir_Mascota();
+        irA(inicio);});
       btn_ajustes.addEventListener("click",()=>{irA(ajustes);});
       btn_ajustesCuenta.addEventListener("click",()=>{irA(ajustesCuenta);});
       btn_cerrarSecion.addEventListener("click",()=>{irA(menuLogin);});
