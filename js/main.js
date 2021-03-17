@@ -85,7 +85,13 @@
     {
       btn_login.addEventListener("click",()=>{irA(login);});
       btn_registro.addEventListener("click",()=>{irA(registro);});
-      btn_enviar.addEventListener("click",()=>{irA(inicio);});
+      btn_enviar.addEventListener("click",()=>{
+        
+        //obtenerdatos_login();
+        if(acceso()==true){
+          irA(inicio);
+        }
+        });
       
 
       
@@ -93,19 +99,20 @@
 
       btn_enviar1.addEventListener("click",()=>{
         
-        if(verificar_Datos()==true && verficar_Correo()==true)
+        if(verificar_Datos_Usuario()==true && verficar_Correo()==true)
         {
           irA(registroMascota);
         }
-       
-        
-        
-      
-       });
+        });
+
+
       btn_enviar2.addEventListener("click",()=>{
-         registro_Usuario();
+        if(verificar_Datos_Mascota()==true){
+          registro_Usuario();
          registro_Mascota();
-         irA(inicio);});
+         irA(inicio);
+        }
+         });
 
 
       btn_volver1.addEventListener("click",()=>{irA(registro);});
@@ -121,7 +128,11 @@
       btn_añadirMascota.addEventListener("click",()=>{irA(añadirMascota);});
       btn_guardarM.addEventListener("click",()=>{
         añadir_Mascota();
-        irA(inicio);});
+          irA(inicio);
+        
+        });
+
+
       btn_ajustes.addEventListener("click",()=>{irA(ajustes);});
       btn_ajustesCuenta.addEventListener("click",()=>{irA(ajustesCuenta);});
       btn_cerrarSecion.addEventListener("click",()=>{irA(menuLogin);});

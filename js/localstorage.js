@@ -26,9 +26,11 @@ function registro_Usuario(){
     idUsuario=contU;
     localStorage.setItem("usuario "+contU, JSON.stringify(Usuario) );
     contU++;
-
-
     
+    
+
+   let prueba= JSON.parse(localStorage.getItem(Usuario));
+    alert(prueba);
 };
 function registro_Mascota(){
 
@@ -60,11 +62,10 @@ function añadir_Mascota(){
 
     localStorage.setItem("Mascota "+contM, JSON.stringify(Mascota));
     contM++;
+    };
 
-};
 
-
-function verificar_Datos(){
+function verificar_Datos_Usuario(){
 
   
     var datos=[nombre_completo.value,correo.value,usuario.value,contrasena.value,confcontrasena.value];
@@ -86,6 +87,25 @@ function verificar_Datos(){
     return true;
     
 }
+function verificar_Datos_Mascota(){
+
+  
+    var datos=[nombre_Mascota.value,edad.value,raza.value];
+   
+    
+    for(var i=0; i<datos.length;i++)
+        {
+        if(datos[i].length==0)
+        {
+            alert("Porfavor ingresar todos los datos");
+            return false
+        }
+    }
+    return true;
+    
+}
+
+
 
 function verficar_Correo (){
 	re=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -95,4 +115,50 @@ function verficar_Correo (){
 	}
 	else return true;
 	}
+
+
+/*function obtenerdatos_login(){
+
+    var usuarioN= document.getElementById("Usuario").value;
+    var contrasenaN= document.getElementById("Clave").value;
+
+    if(usuarioN.value.length==0){
+        if(contrasenaN.value.length==0){
+            alert("los campos estan vacios");
+        }
+    }
+
+}*/
+
+function acceso(){
+    if(JSON.parse(localStorage.getItem("Usuario"))){
+        let usuarioR= JSON.parse(localStorage.getItem("Usuario"));
+        
+        console.log(usuarioR);
+        var usuarioN= document.getElementById("Usuario").value;
+        var contrasenaN= document.getElementById("Clave").value;
+        
+        
+        
+    
+            
+    
+        
+        if(usuarioN== usuarioR && contrasenaN==usuarioR){
+            alert("Login exitoso");
+            return true;
+        }else{
+            alert("Los datos no estan corretos");
+            return false;
+        }
+    }else{
+        alert("no hay ningun usuario registrados");
+    }
+
+ 
+    //var contrasenaR= JSON.parse(localStorage.getItem("Usuario.contrasena"));
+
+   
+    
+}
 
