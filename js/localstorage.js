@@ -163,7 +163,7 @@ function acceso(){
 
             
             if(usuarioN== usuarioR.usuario && contrasenaN==usuarioR.contrasena){
-                alert("Login exitoso");
+                //alert("Login exitoso");
                 
                     return true;
                 
@@ -195,7 +195,7 @@ function cambiarDatos(){
 
     var confirmar_usuario=document.getElementById("usuario_ajustes");
 
-    if(registro_Usuario()==true){
+    /*if(btn_enviar1.addEventListener("click",()=>{irA(registroMascota)})){
         var usuario_registrado= document.getElementById("usuario");
 
         if(confirmar_usuario.value==usuario_registrado.value){
@@ -211,17 +211,26 @@ function cambiarDatos(){
             }
 
         }
-    }else if(acceso()==true){
-        var usuario_loguin= document.getElementById("Usuario");
+    }else */
+    if(acceso()==true){
+        var usuario_login= document.getElementById("Usuario");
+        var contrasena_login=document.getElementById("Clave");
         
-        if(confirmar_usuario.value==usuario_loguin.value){
+        if(confirmar_usuario.value==usuario_login.value){
 
             var clave_ajustes=document.getElementById("clave_ajustes");
             var confirmar_clave_ajustes=document.getElementById("confirmar_clave_ajustes");
 
             if(clave_ajustes.value==confirmar_clave_ajustes.value){
-                alert("datos correctos");
-                return true;
+
+                if(clave_ajustes.value==contrasena_login.value){
+                    alert("datos correctos");
+                    return true;
+                }else{
+                    alert("Contraseña incorrecta");
+                    return false;
+                }
+                
             }else{
                 alert("las contraseñas no coinciden");
             }

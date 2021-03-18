@@ -110,7 +110,7 @@
         if(verificar_Datos_Mascota()==true){
           registro_Usuario();
          registro_Mascota();
-         irA(inicio);
+         irA(login);
         }
          });
 
