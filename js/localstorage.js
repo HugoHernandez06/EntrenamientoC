@@ -1,7 +1,7 @@
 
-var contU=1;
+var contU=idUsuario=1;
 var contM=1;
-var idUsuario=0;
+var todosUsuarios=[];
 
 
 
@@ -17,7 +17,7 @@ function registro_Usuario(){
         contrasena: document.getElementById("contrasena").value,
         confcontrasena: document.getElementById("confcontrasena").value
         
-
+        
     }
 
     
@@ -26,12 +26,29 @@ function registro_Usuario(){
     idUsuario=contU;
     localStorage.setItem("usuario "+contU, JSON.stringify(Usuario) );
     contU++;
+
     
+    llenar_Usuarios();
     
 
-   let prueba= JSON.parse(localStorage.getItem(Usuario));
-    alert(prueba);
+    return idUsuario;
+
+
 };
+
+
+function llenar_Usuarios(){
+    for(var i=0 ;i<idUsuario; i++)
+    {
+        var id=idUsuario;   
+        id--;
+        todosUsuarios[id]="usuario "+idUsuario;
+        
+    }
+}
+
+
+
 function registro_Mascota(){
 
     let Mascota={
@@ -45,7 +62,8 @@ function registro_Mascota(){
 
     localStorage.setItem("Mascota "+contM, JSON.stringify(Mascota));
     contM++;
- 
+    
+    
     
 };
 
@@ -62,6 +80,7 @@ function añadir_Mascota(){
 
     localStorage.setItem("Mascota "+contM, JSON.stringify(Mascota));
     contM++;
+
     };
 
 
@@ -117,48 +136,44 @@ function verficar_Correo (){
 	}
 
 
-/*function obtenerdatos_login(){
+function acceso(){
 
     var usuarioN= document.getElementById("Usuario").value;
     var contrasenaN= document.getElementById("Clave").value;
+    var id=idUsuario;
+    id--;
 
-    if(usuarioN.value.length==0){
-        if(contrasenaN.value.length==0){
-            alert("los campos estan vacios");
-        }
-    }
+    llenar_Usuarios();
 
-}*/
+    for(var i=0; i<idUsuario;i++){
 
-function acceso(){
-    if(JSON.parse(localStorage.getItem("Usuario"))){
-        let usuarioR= JSON.parse(localStorage.getItem("Usuario"));
         
-        console.log(usuarioR);
-        var usuarioN= document.getElementById("Usuario").value;
-        var contrasenaN= document.getElementById("Clave").value;
-        
-        
-        
-    
+        if(JSON.parse(localStorage.getItem(todosUsuarios[i]))){
+            var usuarioR= JSON.parse(localStorage.getItem(todosUsuarios[i]));
+
             
-    
-        
-        if(usuarioN== usuarioR && contrasenaN==usuarioR){
-            alert("Login exitoso");
-            return true;
+            if(usuarioN== usuarioR.usuario && contrasenaN==usuarioR.contrasena){
+                alert("Login exitoso");
+                
+                    return true;
+                
+                
+            }else{
+                
+                if(i==id){
+                    alert("Los datos no estan corretos");
+                    return false;
+                }
+                
+            }
         }else{
-            alert("Los datos no estan corretos");
-            return false;
+            if(i==id){
+                alert("no hay ningun usuario registrados");
+            }
+            
         }
-    }else{
-        alert("no hay ningun usuario registrados");
-    }
 
- 
-    //var contrasenaR= JSON.parse(localStorage.getItem("Usuario.contrasena"));
-
-   
+    }  
     
 }
 
