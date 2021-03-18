@@ -3,7 +3,7 @@
     var btn_login;
     var btn_registro;
     var btn_enviar, btn_enviar1;
-    var btn_volver, btn_volver1, btn_volver2, btn_volver3, btn_volver4, btn_volver5, btn_volver6; 
+    var btn_volver, btn_volver1, btn_volver2, btn_volver3, btn_volver4, btn_volver5, btn_volver6, btn_volver7; 
     var btn_entrenamiento;
     var btn_cuidados;
     var btn_basico;
@@ -15,6 +15,7 @@
     var btn_ajustesCuenta;
     var btn_cerrarSecion;
     var btn_cambioDatos, btn_guardarCD;
+    var btn_acercade;
 
 
 
@@ -43,8 +44,9 @@
       ajustes = document.getElementById("ajustes");
       ajustesCuenta = document.getElementById("ajustesCuenta");
       cambioDatos = document.getElementById("cambioDatos");
+      acercade = document.getElementById("acercaDe");
 
-      secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, misMascotas, añadirMascota, ajustes, ajustesCuenta, cambioDatos, dieta, basico, trucos];
+      secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, misMascotas, añadirMascota, ajustes, ajustesCuenta, cambioDatos, dieta, basico, trucos, acercaDe];
 
       btn_login=document.getElementById("btn_login");
       btn_registro=document.getElementById("btn_registro");
@@ -58,6 +60,7 @@
       btn_volver4=document.getElementById("btn_volver4");
       btn_volver5=document.getElementById("btn_volver5");
       btn_volver6=document.getElementById("btn_volver6");
+      btn_volver7=document.getElementById("btn_volver7");
       btn_entrenamiento=document.getElementById("btn_entrenamiento");
       btn_cuidados=document.getElementById("btn_cuidados");
       btn_basico=document.getElementById("btn_basico");
@@ -71,6 +74,7 @@
       btn_cerrarSecion=document.getElementById("btn_cerrarSecion");
       btn_cambioDatos=document.getElementById("btn_cambioDatos");
       btn_guardarCD=document.getElementById("btn_guardarCD");
+      btn_acercade=document.getElementById("btn_acercade");
 
 
 
@@ -119,6 +123,7 @@
       btn_volver4.addEventListener("click",()=>{irA(ajustes);});
       btn_volver5.addEventListener("click",()=>{irA(ajustesCuenta);});
       btn_volver6.addEventListener("click",()=>{irA(misMascotas);});
+      btn_volver7.addEventListener("click",()=>{irA(inicio);});
       btn_entrenamiento.addEventListener("click",()=>{irA(entrenamiento);});
       btn_cuidados.addEventListener("click",()=>{irA(cuidados);});
       btn_basico.addEventListener("click",()=>{irA(basico);});
@@ -126,6 +131,7 @@
       btn_misMascotas.addEventListener("click",()=>{irA(misMascotas);});
       btn_trucos.addEventListener("click",()=>{irA(trucos);});
       btn_añadirMascota.addEventListener("click",()=>{irA(añadirMascota);});
+      btn_acercade.addEventListener("click",()=>{irA(acercaDe);});
 
 
 

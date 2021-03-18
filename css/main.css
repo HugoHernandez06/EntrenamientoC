@@ -38,9 +38,20 @@
 .volver,
 .volver2,
 .volver3 {
-  margin-left: -321px;
+  background-color: #89D9D1;
+  color: black;
+  padding: 3.4px;
   text-decoration: none;
-  color: black; }
+  font-weight: 600;
+  font-size: 30px;
+  border-radius: 6px;
+  border: 2px #0016b0;
+  line-height: 10px;
+  display: block;
+  width: 9%;
+  position: relative;
+  top: 1px;
+  right: 1px; }
 
 .boton_añadir {
   text-decoration: none;
@@ -79,6 +90,7 @@
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/materialicons/v80/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2"); }
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -93,6 +105,15 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased; }
+
+.material-tabs{
+  background:#89D9D1;
+  justify-content: space-between;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 30px;
+  color: white;
+}
 
 .material-icons.cl-white {
   color: black; }
@@ -117,6 +138,14 @@
   padding: 20px;
   align: center;
   width: inherit; }
+
+.panel-central-especial {
+  width: 100px;
+  height: 10px;
+  padding: 20px;
+  align: center;
+  width: inherit;
+  bottom: 10px; }
 
 .pantallas-info {
   HEIGHT: 430px;
@@ -184,6 +213,9 @@ body {
   background: #F2ECD8; }
 
 #cambioDatos {
+  background: #F2ECD8; }
+
+#acercaDe {
   background: #F2ECD8; }
 
 /*# sourceMappingURL=main.css.map */
