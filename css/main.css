@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .boton {
   background-color: #89D9D1;
   color: black;
@@ -106,13 +107,21 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased; }
 
-.material-tabs{
+nav{
   background:#89D9D1;
   justify-content: space-between;
   display: flex;
   padding: 5px;
   margin-bottom: 30px;
   color: white;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .material-icons.cl-white {
