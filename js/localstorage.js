@@ -25,6 +25,7 @@ function registro_Usuario(){
     contU++;
     
     
+    
 
     llenar_Usuarios();
     
@@ -161,10 +162,10 @@ function acceso(){
         if(JSON.parse(localStorage.getItem(todosUsuarios[i]))){
             var usuarioR= JSON.parse(localStorage.getItem(todosUsuarios[i]));
 
+          
             
             if(usuarioN== usuarioR.usuario && contrasenaN==usuarioR.contrasena){
                 //alert(usuarioR.idUsuario);
-                
                     return true;
                     
                     
@@ -246,6 +247,14 @@ function cambiarDatos(){
 
             
 }
+
+/*function mostrar_datos(){
+
+
+      var usuarioLogueado= document.getElementById("usuario_ajustes").value;
+            var objetivoUsuario= document.getElementById("objetivoUsuario");
+                objetivoUsuario.innerHTML = usuarioLogueado;
+}*/
 
     
 

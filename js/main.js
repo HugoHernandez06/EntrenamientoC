@@ -153,6 +153,7 @@
       btn_cambioDatos.addEventListener("click",()=>{
         
         if(cambiarDatos()==true){
+          //mostrar_datos();
           irA(cambioDatos);
         }  
       });
@@ -165,7 +166,7 @@
           btn_volver[i].addEventListener("click",()=>{irA(menuLogin);});
           
         }
-        for (var i=0;i<=5;i++) 
+        for (var i=0;i<=4;i++) 
         {
           btn_volver2[i].addEventListener("click",()=>{irA(inicio);});
           
