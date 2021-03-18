@@ -99,7 +99,7 @@
 
       btn_enviar1.addEventListener("click",()=>{
         
-        if(verificar_Datos_Usuario()==true && verficar_Correo()==true)
+        if(verificar_Datos_Usuario()==true)
         {
           irA(registroMascota);
         }
@@ -126,9 +126,16 @@
       btn_misMascotas.addEventListener("click",()=>{irA(misMascotas);});
       btn_trucos.addEventListener("click",()=>{irA(trucos);});
       btn_añadirMascota.addEventListener("click",()=>{irA(añadirMascota);});
+
+
+
       btn_guardarM.addEventListener("click",()=>{
-        añadir_Mascota();
+
+        if(verificar_Datos_Agregar_Mascota()==true){
+          anadir_Mascota();
           irA(inicio);
+        }
+        
         
         });
 
@@ -136,7 +143,14 @@
       btn_ajustes.addEventListener("click",()=>{irA(ajustes);});
       btn_ajustesCuenta.addEventListener("click",()=>{irA(ajustesCuenta);});
       btn_cerrarSecion.addEventListener("click",()=>{irA(menuLogin);});
-      btn_cambioDatos.addEventListener("click",()=>{irA(cambioDatos);});
+      
+      btn_cambioDatos.addEventListener("click",()=>{
+        
+        if(cambiarDatos()==true){
+          irA(cambioDatos);
+        }  
+      });
+
       btn_guardarCD.addEventListener("click",()=>{irA(inicio);});
 
 
