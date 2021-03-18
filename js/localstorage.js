@@ -163,9 +163,11 @@ function acceso(){
 
             
             if(usuarioN== usuarioR.usuario && contrasenaN==usuarioR.contrasena){
-                //alert("Login exitoso");
+                //alert(usuarioR.idUsuario);
                 
                     return true;
+                    
+                    
                 
                 
             }else{
