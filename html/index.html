@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link REL=StyleSheet HREF="../css/main.css" TYPE="text/css" MEDIA=screen>
@@ -26,10 +27,11 @@
    <!--login-->
    <section id="login" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver" ><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver" ><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
          <a href=""><img src="../img/dog-labrador-icon.png" ></a>   
       </div>
@@ -46,10 +48,11 @@
    <!--registro-->
    <section id="registro" class="ocultar" >
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
          <a href=""><img src="../img/dog-labrador-icon.png" alt="splash" border=""></a>
       </div>
@@ -75,18 +78,22 @@
    <!--registro mascota-->
    <section id="registroMascota" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver1"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver1"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-reducido">
-      <h2>Registra tu mascota</h2>
+         <h2>Registra tu mascota</h2>
       </div>
       <div class="panel-central-img">
-      <a href=""><img src="../img/camera-icon.png" alt="añadir foto" border=""></a>
+         <div class="imagearea"></div>
       </div>
       <div class="panel-central-reducido">
-      <h3>añadir foto</h3>
+         <h3>añadir foto</h3>
+      </div>
+      <div class="panel-central-reducido">
+         <input class="classhere" type="file" name="logo" id="logo" />
       </div>
       <div class="panel-central-reducido">
          <input type="text"  placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
@@ -109,10 +116,11 @@
    <!--cambio datos-->
    <section id="cambioDatos" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver5"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver5"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
          <a href=""><img src="../img/dog-labrador-icon.png" alt=""></a>       
       </div>
@@ -136,12 +144,13 @@
    <!--inicio-->
    <section id="inicio" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a  class = "ajustes" href="javascript:void(0);" id="btn_ajustes"><span class="material-icons cl-black">
-         settings</span></a>
-      </nav></div>
+         <nav class="fixed-top"><a  class = "ajustes" href="javascript:void(0);" id="btn_ajustes"><span class="material-icons cl-black">
+            settings</span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
-      <a href=""><img src="../img/22214-dog-face-icon.png" alt="foto perfil" border=""></a>          
-      <h3>Nombre / raza</h3>
+         <a href=""><img src="../img/22214-dog-face-icon.png" alt="foto perfil" border=""></a>          
+         <h3>Nombre / raza</h3>
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_entrenamiento">Entrenamiento</a>
@@ -162,10 +171,11 @@
    <!--cuidados-->
    <section id="cuidados" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <br>
       <h1>Cuidados</h1>
       <textarea class="pantallas-info" cols="20" rows="10" readonly=»readonly»>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32</textarea>
@@ -173,11 +183,12 @@
    <!--dieta-->
    <section id="dieta" class="ocultar">
       <div class="container">
-      <nav class="fixed-top">
-         <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top">
+            <a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <br>
       <h1>Dieta</h1>
       <textarea class="pantallas-info" cols="20" rows="10" readonly=»readonly»>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32</textarea>
@@ -185,10 +196,11 @@
    <!--entrenamiento-->
    <section id="entrenamiento" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <br>
       <h1>Entrenamiento</h1>
       <div class="panel-central-reduciodo">
@@ -206,11 +218,12 @@
    <!--basico-->
    <section id="basico" class="ocultar">
       <div class="container">
-      <nav class="fixed-top">
-         <a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top">
+            <a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <br>
       <h1>Basico</h1>
       <textarea class="pantallas-info" cols="20" rows="10" readonly=»readonly»>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32</textarea>
@@ -218,10 +231,11 @@
    <!--trucos-->
    <section id="trucos" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver3" id="btn_volver3"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <br>
       <h1>Trucos</h1>
       <textarea class="pantallas-info" cols="20" rows="10" readonly=»readonly»>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32</textarea>
@@ -229,11 +243,12 @@
    <!--mismascotas-->
    <section id="misMascotas" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
-      <div class="panel-central-reducido">
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
+      <div class="panel-central">
          <h1>Mis mascotas</h1>
       </div>
       <div class="panel-central-reducido">
@@ -245,23 +260,29 @@
       <div class="panel-central-reducido">
          <input type="text" readonly = »readonly» placeholder="edad">
       </div>
+      <h2>
+      Añadir mascota<h2\>
       <div class="panel-central-reducido">
          <a class="boton_añadir" href="javascript:void(0);" id="btn_añadirMascota">+</a>
       </div>
       <div class="panel-central-reducido">
-      <h2>
-      Añadir mascota<h2\>
    </section>
    <!--añadirmascota-->
    <section id="añadirMascota" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver6"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver6"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
-         <a href=""><img src="../img/camera-icon.png" alt="añadir foto" border=""></a>
+         <div class="imagearea"></div>
+      </div>
+      <div class="panel-central-reducido">
          <h3>añadir foto</h3>
+      </div>
+      <div class="panel-central-reducido">
+         <input class="classhere" type="file" name="logo" id="logo" />
       </div>
       <div class="panel-central-reducido">
          <input type="text" placeholder="Añadir Nombre" id="nombre_Anadir_Mascota">
@@ -284,10 +305,11 @@
    <!--ajustes-->
    <section id="ajustes" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver2" id="btn_volver2"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
          <h2>Ajustes</h2>
          <a href=""><img src="../img/ajustes.png" width="130" height="130"></a>
@@ -302,10 +324,11 @@
    <!--ajustes cuenta-->
    <section id="ajustesCuenta" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver4"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver4"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-img">
          <a href=""><img src="../img/dog-labrador-icon.png" alt="Login" border=""></a>   
       </div>
@@ -325,10 +348,11 @@
    <!--acerca de-->
    <section id="acercaDe" class="ocultar">
       <div class="container">
-      <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver7"><span class="material-icons cl-black">
-         arrow_back
-         </span></a>
-      </nav></div>
+         <nav class="fixed-top"><a href="javascript:void(0);" class="volver" id="btn_volver7"><span class="material-icons cl-black">
+            arrow_back
+            </span></a>
+         </nav>
+      </div>
       <div class="panel-central-reducido">
          <h1>Acerca de</h1>
       </div>
