@@ -1,14 +1,8 @@
 src = "https://code.jquery.com/jquery-3.6.0.js";
 
-<<<<<<< Updated upstream
-var contU = idUsuario = 1;
-var contM = 1;
-var todosUsuarios = [];
-=======
 var contU=idUsuario=idUsuarioLogin=1;
 var contM=1;
 var todosUsuarios=[];
->>>>>>> Stashed changes
 
 $(document).ready(function () {
     //You might want to do if check to see if localstorage set for theImage here
@@ -71,14 +65,8 @@ function llenar_Usuarios() {
     for (var i = 0; i < idUsuario; i++) {
         var id = idUsuario;
         id--;
-<<<<<<< Updated upstream
         todosUsuarios[id] = "usuario " + idUsuario;
 
-=======
-        todosUsuarios[id]="usuario "+idUsuario;
-        alert(todosUsuarios[i]);
-        
->>>>>>> Stashed changes
     }
 }
 
@@ -194,22 +182,6 @@ function acceso() {
         if (JSON.parse(localStorage.getItem(todosUsuarios[i]))) {
             var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
 
-
-<<<<<<< Updated upstream
-            if (usuarioN == usuarioR.usuario && contrasenaN == usuarioR.contrasena) {
-                //alert(usuarioR.idUsuario);
-                return true;
-
-
-            } else {
-
-                if (i == id) {
-=======
-            alert(usuarioR.usuario);    
-            alert(usuarioN);
-
-            alert(usuarioR.contrasena);
-            alert(contrasenaN);
             
             if(usuarioN == usuarioR.usuario && contrasenaN==usuarioR.contrasena){
                 //alert(usuarioR.idUsuario);
@@ -223,7 +195,6 @@ function acceso() {
             }else{
                 
                 if(i==id){
->>>>>>> Stashed changes
                     alert("Los datos no estan corretos");
                     return false;
                 }
@@ -240,17 +211,8 @@ function acceso() {
 
 }
 
-<<<<<<< Updated upstream
-function cambiarDatos() {
 
 
-    // var usuarios=[usuario_loguin.value,usuario_registrado.value];
-
-    var confirmar_usuario = document.getElementById("usuario_ajustes");
-=======
-
-
->>>>>>> Stashed changes
 
 
 function verificar_Datos_Ajustes(){
@@ -258,19 +220,11 @@ function verificar_Datos_Ajustes(){
 
     var confirmar_usuario=document.getElementById("usuario_ajustes");
 
-<<<<<<< Updated upstream
-        }
-    }else */
-    if (acceso() == true) {
-        var usuario_login = document.getElementById("Usuario");
-        var contrasena_login = document.getElementById("Clave");
-=======
     if(acceso()==true){
         var usuario_login= document.getElementById("Usuario");
         var contrasena_login=document.getElementById("Clave");
         
         if(confirmar_usuario.value==usuario_login.value){
->>>>>>> Stashed changes
 
         if (confirmar_usuario.value == usuario_login.value) {
 
@@ -302,11 +256,8 @@ function verificar_Datos_Ajustes(){
     }
 
 
-<<<<<<< Updated upstream
-=======
-           
+  }
     
->>>>>>> Stashed changes
 }
 
 function cambiarDatos(){
@@ -342,9 +293,3 @@ function cambiarDatos(){
             var objetivoUsuario= document.getElementById("objetivoUsuario");
                 objetivoUsuario.innerHTML = usuarioLogueado;
 }*/
-
-    
-
-    
-
-
