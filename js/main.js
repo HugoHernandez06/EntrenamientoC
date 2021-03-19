@@ -186,8 +186,11 @@ function agregarEnventos() {
 
   btn_guardarCD.addEventListener("click", () => {
 
-    if(cambiarDatos()==true){
-      irA(inicio);
+    if(verificar_cambiarDatos()==true){
+      if(cambiarDatos()==true){
+        irA(inicio);
+      }
+      
     }
     
   });

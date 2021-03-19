@@ -7,6 +7,8 @@ var todosUsuarios=[];
 $(document).ready(function () {
     //You might want to do if check to see if localstorage set for theImage here
     var img = new Image();
+    /*img.width="100";
+    img.height="100";*/
     img.src = localStorage.theImage;
 
     $('.imagearea').html(img);
@@ -218,26 +220,20 @@ function acceso() {
 function verificar_Datos_Ajustes(){
 
 
-    var confirmar_usuario=document.getElementById("usuario_ajustes");
+        var usuario_Registrado= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
+        var confirmar_usuario=document.getElementById("usuario_ajustes");
+       
 
-    if(acceso()==true){
-        var usuario_login= document.getElementById("Usuario");
-        var contrasena_login=document.getElementById("Clave");
-        
-        if(confirmar_usuario.value==usuario_login.value){
-
-        if (confirmar_usuario.value == usuario_login.value) {
+        if (confirmar_usuario.value == usuario_Registrado.usuario) {
 
             var clave_ajustes = document.getElementById("clave_ajustes");
             var confirmar_clave_ajustes = document.getElementById("confirmar_clave_ajustes");
 
             if (clave_ajustes.value == confirmar_clave_ajustes.value) {
 
-                if (clave_ajustes.value == contrasena_login.value) {
+                if (clave_ajustes.value == usuario_Registrado.contrasena) {
                     alert("datos correctos");
-                    alert(idUsuarioLogin);
                    
-                    
                     return true;
                 } else {
                     alert("Contraseña incorrecta");
@@ -247,10 +243,7 @@ function verificar_Datos_Ajustes(){
             } else {
                 alert("las contraseñas no coinciden");
             }
-        }else{
-            alert("El usuario no es correcto");
-        }
-    } else {
+        }else {
         alert("El usuario no es correcto");
         return false;
     }
@@ -258,15 +251,10 @@ function verificar_Datos_Ajustes(){
 
   }
     
-}
+
 
 function cambiarDatos(){
 
-    /*var cambioUsuario= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
-
-    console.log(JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin)));*/
-
-    
      
     let actualizarusuario={
         idUsuario: idUsuarioLogin,
@@ -281,6 +269,38 @@ function cambiarDatos(){
 
     localStorage.setItem("usuario "+idUsuarioLogin, JSON.stringify(actualizarusuario) );
 
+    return true;
+}
+
+function verificar_cambiarDatos(){
+    let actualizarusuario={
+        idUsuario: idUsuarioLogin,
+        nombre_completo: document.getElementById("nombre_completo_cambio").value,
+        correo: document.getElementById("correo_cambio").value,
+        usuario: document.getElementById("usuario_cambio").value,
+        contrasena: document.getElementById("contrasena_cambio").value,
+        confcontrasena: document.getElementById("confcontrasena_cambio").value
+        
+        
+    }
+    var datos = [actualizarusuario.nombre_completo,actualizarusuario.correo,actualizarusuario.usuario,actualizarusuario.contrasena,actualizarusuario.confcontrasena];
+    
+    re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    for (var i = 0; i < datos.length; i++) {
+        if (datos[i].length == 0) {
+            alert("Porfavor ingresar todos los datos");
+            return false
+        }
+        if (actualizarusuario.contrasena != actualizarusuario.confcontrasena) {
+            alert("Las contraseñas no coinciden");
+            return false;
+        }
+        if (!re.exec(actualizarusuario.correo)) {
+            alert('Correo no valido');
+            return false;
+        }
+
+    }
     return true;
 }
 
