@@ -1,8 +1,14 @@
 src = "https://code.jquery.com/jquery-3.6.0.js";
 
+<<<<<<< Updated upstream
 var contU = idUsuario = 1;
 var contM = 1;
 var todosUsuarios = [];
+=======
+var contU=idUsuario=idUsuarioLogin=1;
+var contM=1;
+var todosUsuarios=[];
+>>>>>>> Stashed changes
 
 $(document).ready(function () {
     //You might want to do if check to see if localstorage set for theImage here
@@ -29,6 +35,11 @@ $(document).ready(function () {
         reader.readAsDataURL(file); //attempts to read the file in question.
     });
 });
+
+
+
+
+
 
 
 //registrar Usuarios
@@ -60,8 +71,14 @@ function llenar_Usuarios() {
     for (var i = 0; i < idUsuario; i++) {
         var id = idUsuario;
         id--;
+<<<<<<< Updated upstream
         todosUsuarios[id] = "usuario " + idUsuario;
 
+=======
+        todosUsuarios[id]="usuario "+idUsuario;
+        alert(todosUsuarios[i]);
+        
+>>>>>>> Stashed changes
     }
 }
 
@@ -178,6 +195,7 @@ function acceso() {
             var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
 
 
+<<<<<<< Updated upstream
             if (usuarioN == usuarioR.usuario && contrasenaN == usuarioR.contrasena) {
                 //alert(usuarioR.idUsuario);
                 return true;
@@ -186,6 +204,26 @@ function acceso() {
             } else {
 
                 if (i == id) {
+=======
+            alert(usuarioR.usuario);    
+            alert(usuarioN);
+
+            alert(usuarioR.contrasena);
+            alert(contrasenaN);
+            
+            if(usuarioN == usuarioR.usuario && contrasenaN==usuarioR.contrasena){
+                //alert(usuarioR.idUsuario);
+
+                idUsuarioLogin = usuarioR.idUsuario;
+                    return idUsuarioLogin,true;
+                    
+                    
+                
+                
+            }else{
+                
+                if(i==id){
+>>>>>>> Stashed changes
                     alert("Los datos no estan corretos");
                     return false;
                 }
@@ -202,33 +240,37 @@ function acceso() {
 
 }
 
+<<<<<<< Updated upstream
 function cambiarDatos() {
 
 
     // var usuarios=[usuario_loguin.value,usuario_registrado.value];
 
     var confirmar_usuario = document.getElementById("usuario_ajustes");
+=======
 
-    /*if(btn_enviar1.addEventListener("click",()=>{irA(registroMascota)})){
-        var usuario_registrado= document.getElementById("usuario");
 
-        if(confirmar_usuario.value==usuario_registrado.value){
+>>>>>>> Stashed changes
 
-            var clave_ajustes=document.getElementById("clave_ajustes");
-            var confirmar_clave_ajustes=document.getElementById("confirmar_clave_ajustes");
 
-            if(clave_ajustes.value==confirmar_clave_ajustes.value){
-                alert("datos correctos");
-                return true;
-            }else{
-                alert("las contraseñas no coinciden");
-            }
+function verificar_Datos_Ajustes(){
 
+
+    var confirmar_usuario=document.getElementById("usuario_ajustes");
+
+<<<<<<< Updated upstream
         }
     }else */
     if (acceso() == true) {
         var usuario_login = document.getElementById("Usuario");
         var contrasena_login = document.getElementById("Clave");
+=======
+    if(acceso()==true){
+        var usuario_login= document.getElementById("Usuario");
+        var contrasena_login=document.getElementById("Clave");
+        
+        if(confirmar_usuario.value==usuario_login.value){
+>>>>>>> Stashed changes
 
         if (confirmar_usuario.value == usuario_login.value) {
 
@@ -239,6 +281,9 @@ function cambiarDatos() {
 
                 if (clave_ajustes.value == contrasena_login.value) {
                     alert("datos correctos");
+                    alert(idUsuarioLogin);
+                   
+                    
                     return true;
                 } else {
                     alert("Contraseña incorrecta");
@@ -248,6 +293,8 @@ function cambiarDatos() {
             } else {
                 alert("las contraseñas no coinciden");
             }
+        }else{
+            alert("El usuario no es correcto");
         }
     } else {
         alert("El usuario no es correcto");
@@ -255,7 +302,38 @@ function cambiarDatos() {
     }
 
 
+<<<<<<< Updated upstream
+=======
+           
+    
+>>>>>>> Stashed changes
 }
+
+function cambiarDatos(){
+
+    /*var cambioUsuario= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
+
+    console.log(JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin)));*/
+
+    
+     
+    let actualizarusuario={
+        idUsuario: idUsuarioLogin,
+        nombre_completo: document.getElementById("nombre_completo_cambio").value,
+        correo: document.getElementById("correo_cambio").value,
+        usuario: document.getElementById("usuario_cambio").value,
+        contrasena: document.getElementById("contrasena_cambio").value,
+        confcontrasena: document.getElementById("confcontrasena_cambio").value
+        
+        
+    }
+
+    localStorage.setItem("usuario "+idUsuarioLogin, JSON.stringify(actualizarusuario) );
+
+    return true;
+}
+
+
 
 /*function mostrar_datos(){
 

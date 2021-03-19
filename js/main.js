@@ -175,14 +175,21 @@ function agregarEnventos() {
 
   btn_cambioDatos.addEventListener("click", () => {
 
-    if (cambiarDatos() == true) {
-      //mostrar_datos();
+    if (verificar_Datos_Ajustes() == true) {
+      
       irA(cambioDatos);
+      
+      
+    
     }
   });
 
   btn_guardarCD.addEventListener("click", () => {
-    irA(inicio);
+
+    if(cambiarDatos()==true){
+      irA(inicio);
+    }
+    
   });
 
 
