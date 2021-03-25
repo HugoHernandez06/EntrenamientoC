@@ -90,6 +90,7 @@ function agregarEnventos() {
     //obtenerdatos_login();
     if (acceso() == true) {
       mostrar_Datos_Mascota();
+      mostrar_Datos_Perfil();
       irA(inicio);
     }
   });

@@ -364,10 +364,26 @@ function mostrar_Datos_Mascota(){
 
    //alert(idUsuarioLogin);
       var datos_Mascota= JSON.parse(localStorage.getItem("Mascota "+idUsuarioLogin));
-            datos_Mascota_Nombre= datos_Mascota.nombre_Mascota;
+            var datos_Mascota_Nombre= datos_Mascota.nombre_Mascota;
             var objetivoMascotaNombre= document.getElementById("datos_mascota");
                 objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
     var datos_Mascota_Raza= datos_Mascota.raza;
             var objetivoMascotaRaza= document.getElementById("datos_mascota_raza");
                 objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
+}
+
+function mostrar_Datos_Perfil(){
+
+    var datos_Usuario= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
+        var dato_nombre=datos_Usuario.nombre_completo;
+        var objetivoUsuarioNombre=document.getElementById("nombre_perfil");
+            objetivoUsuarioNombre.innerHTML = dato_nombre;
+    var dato_usuario=datos_Usuario.usuario;
+        var objetivoUsuarioUsuario=document.getElementById("usuario_perfil");
+        objetivoUsuarioUsuario.innerHTML = dato_usuario;
+    var dato_correo=datos_Usuario.correo;
+        var objetivoUsuarioCorreo=document.getElementById("correo_perfil");
+        objetivoUsuarioCorreo.innerHTML = dato_correo;
+
+
 }
