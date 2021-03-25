@@ -89,6 +89,7 @@ function agregarEnventos() {
 
     //obtenerdatos_login();
     if (acceso() == true) {
+      mostrar_Datos_Mascota();
       irA(inicio);
     }
   });

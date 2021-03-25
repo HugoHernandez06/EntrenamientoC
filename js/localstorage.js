@@ -1,8 +1,9 @@
 src = "https://code.jquery.com/jquery-3.6.0.js";
 
 var contU=idUsuario=idUsuarioLogin=1;
-var contM=1;
+var contM=idMascota=idMascotaLogin=1;
 var todosUsuarios=[];
+var todasMascotas=[];
 
 $(document).ready(function () {
     //You might want to do if check to see if localstorage set for theImage here
@@ -72,6 +73,16 @@ function llenar_Usuarios() {
     }
 }
 
+function llenar_Mascotas() {
+    for (var i = 0; i < idMascota; i++) {
+        var id = idMascota;
+        id--;
+        todasMascotas[id] = "Mascota " + idMascota;
+
+    }
+}
+
+
 //verificar datos ingresados para registro de usuarios
 
 
@@ -93,11 +104,36 @@ function verificar_Datos_Usuario() {
             alert('Correo no valido');
             return false;
         }
+        if(contrasena.value.length<8){
+            alert("la contrasena debe contener 8 caracteres como minimo");
+            return false;
+        } if (JSON.parse(localStorage.getItem(todosUsuarios[i]))) {
+            var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
 
-    }
+            
+            if(usuarioR.usuario==usuario.value){
+                alert("ya existe un usuario con este nombre");
+                return false;
+  
+            }
+            if(usuarioR.correo==correo.value){
+                alert("Ya existe una cuenta con este correo");
+                return false;
+            }
+
+            }
+        
     return true;
 
+    }
 }
+
+
+
+
+    
+
+
 
 
 //registrar Mascotas
@@ -111,9 +147,13 @@ function registro_Mascota() {
         raza: document.getElementById("raza").value
 
     }
-
+    idMascota=contM;
     localStorage.setItem("Mascota " + contM, JSON.stringify(Mascota));
     contM++;
+
+    llenar_Mascotas();
+
+    return idMascota,true;
 }
 //verificar datos ingresado para registro de mascota
 
@@ -139,7 +179,7 @@ function anadir_Mascota() {
 
     let anadir_Mascota = {
         idMascota: contM,
-        idUsuario: idUsuario,
+        idUsuario: idUsuarioLogin,
         nombre_Anadir_Mascota: document.getElementById("nombre_Anadir_Mascota").value,
         edad_Anadir_Mascota: document.getElementById("edad_Anadir_Mascota").value,
         raza_Anadir_mascota: document.getElementById("raza_Anadir_mascota").value
@@ -148,6 +188,10 @@ function anadir_Mascota() {
 
     localStorage.setItem("Mascota " + contM, JSON.stringify(anadir_Mascota));
     contM++;
+
+    llenar_Mascotas();
+
+    return 
 
 }
 
@@ -183,13 +227,22 @@ function acceso() {
 
         if (JSON.parse(localStorage.getItem(todosUsuarios[i]))) {
             var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
+            var mascotaR = JSON.parse(localStorage.getItem(todasMascotas[i]));
 
             
             if(usuarioN == usuarioR.usuario && contrasenaN==usuarioR.contrasena){
+               // alert(mascotaR.idUsuario);
                 //alert(usuarioR.idUsuario);
-
-                idUsuarioLogin = usuarioR.idUsuario;
-                    return idUsuarioLogin,true;
+                for(var i =0; i<idUsuario; i++){
+                    if(mascotaR.idUsuario==usuarioR.idUsuario){
+                        idUsuarioLogin = usuarioR.idUsuario;
+                        idMascotaLogin=usuarioR.idUsuario;
+                    
+                        return idUsuarioLogin,true;
+                }
+                
+                }
+                
                     
                     
                 
@@ -306,10 +359,15 @@ function verificar_cambiarDatos(){
 
 
 
-/*function mostrar_datos(){
+function mostrar_Datos_Mascota(){
 
 
-      var usuarioLogueado= document.getElementById("usuario_ajustes").value;
-            var objetivoUsuario= document.getElementById("objetivoUsuario");
-                objetivoUsuario.innerHTML = usuarioLogueado;
-}*/
+   //alert(idUsuarioLogin);
+      var datos_Mascota= JSON.parse(localStorage.getItem("Mascota "+idUsuarioLogin));
+            datos_Mascota_Nombre= datos_Mascota.nombre_Mascota;
+            var objetivoMascotaNombre= document.getElementById("datos_mascota");
+                objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
+    var datos_Mascota_Raza= datos_Mascota.raza;
+            var objetivoMascotaRaza= document.getElementById("datos_mascota_raza");
+                objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
+}
