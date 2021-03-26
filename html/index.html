@@ -14,8 +14,9 @@
    </section>
    <!--menu login-->
    <section id="menuLogin" class="ocultar">
+
       <div class="panel-central-img">
-         <a><img src="../img/Logo-1_Happy-Woof.png" width="150" height="150"></a>
+         <img src="../img/Logo-1_Happy-Woof.png"  width="200" height="200">
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_login" >Login</a>
@@ -87,13 +88,10 @@
          <h2>Registra tu mascota</h2>
       </div>
       <div class="panel-central-img">
-         <img class="imagearea" width="110" height="110"><img/>
-      </div>
-      <div class="panel-central-reducido">
+         <img src="" id="imgVista" width="150" height="100">
+         <input type="file" id="miArchivo">
          <h3>añadir foto</h3>
-      </div>
-      <div class="panel-central-reducido">
-         <input class="classhere" type="file" name="logo" id="logo" />
+       
       </div>
       <div class="panel-central-reducido">
          <input type="text"  placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
@@ -130,12 +128,6 @@
          <input type="text"  placeholder="Nombre Completo"  id="nombre_completo_cambio" >
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Correo Electronico"  id="correo_cambio">
-      </div>
-      <div class="panel-central-reducido">
-         <input type="text"  placeholder="Usuario"  id="usuario_cambio" >
-      </div>
-      <div class="panel-central-reducido">
          <input type="password"  placeholder="Contraseña"  id="contrasena_cambio" >
       </div>
       <div class="panel-central-reducido">
@@ -152,10 +144,13 @@
             settings</span></a>
          </nav>
       </div>
-      <div class="panel-central-img">
-         <a><img src="../img/22214-dog-face-icon.png" alt="foto perfil" ></a>   
-         <h3>Nombre: <label id="datos_mascota"></label></h3>
-         <h3>Raza: <label id="datos_mascota_raza"></label></h3>
+      <div class="panel-central">
+         <br>
+      <img src="" id="foto_perfil" width="150" height="100">
+      </div>
+      <div class="panel-central">
+         <br>
+         <h4><label id="datos_mascota"></label>/<label id="datos_mascota_raza"></label></h4>
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_entrenamiento">Entrenamiento</a>

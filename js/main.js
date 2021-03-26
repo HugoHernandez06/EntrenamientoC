@@ -89,6 +89,7 @@ function agregarEnventos() {
 
     //obtenerdatos_login();
     if (acceso() == true) {
+     
       mostrar_Datos_Mascota();
       mostrar_Datos_Perfil();
       irA(inicio);
@@ -100,6 +101,8 @@ function agregarEnventos() {
 
     if (verificar_Datos_Usuario() == true) {
       irA(registroMascota);
+      indice++;
+      guardarImagen();
     }
   });
 

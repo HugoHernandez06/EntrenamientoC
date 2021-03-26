@@ -1,37 +1,16 @@
-src = "https://code.jquery.com/jquery-3.6.0.js";
 
-var contU = idUsuario = idUsuarioLogin = 1;
-var contM = idMascota = idMascotaLogin = 1;
-var todosUsuarios = [];
-var todasMascotas = [];
 
-$(document).ready(function () {
-    //You might want to do if check to see if localstorage set for theImage here
-    var img = new Image();
-    /*img.width="100";
-    img.height="100";*/
-    img.src = localStorage.theImage;
+var contU=idUsuario=idUsuarioLogin=1;
+var contM=idMascota=idMascotaLogin=1;
+var todosUsuarios=[];
+var todasMascotas=[];
+var validarGuardarImg =0;
+var indice=0;
 
-    $('.imagearea').html(img);
 
-    $("body").on("change", ".classhere", function () {
-        //Equivalent of getElementById
-        var fileInput = $(this)[0]; //returns a HTML DOM object by putting the [0] since it's really an associative array.
-        var file = fileInput.files[0]; //there is only '1' file since they are not multiple type.
 
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            // Create a new image.
-            var img = new Image();
 
-            img.src = reader.result;
-            localStorage.theImage = reader.result; //stores the image to localStorage
-            $(".imagearea").html(img);
-        }
 
-        reader.readAsDataURL(file); //attempts to read the file in question.
-    });
-});
 
 
 //registrar Usuarios
@@ -87,6 +66,8 @@ function verificar_Datos_Usuario() {
 
     re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     for (var i = 0; i < datos.length; i++) {
+
+
         if (datos[i].length == 0) {
             alert("Porfavor ingresar todos los datos");
             return false
@@ -151,11 +132,15 @@ function verificar_Datos_Mascota() {
 
     var datos = [nombre_Mascota.value, edad.value, raza.value];
 
-
+    
     for (var i = 0; i < datos.length; i++) {
         if (datos[i].length == 0) {
             alert("Porfavor ingresar todos los datos");
-            return false
+            return false;
+        }
+        if(validarGuardarImg==0){
+            alert("Debes agregar una foto");
+            return false;
         }
     }
     return true;
@@ -290,12 +275,12 @@ function verificar_Datos_Ajustes() {
 
 function cambiarDatos() {
 
-
-    let actualizarusuario = {
+     var usuarioR= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
+    let actualizarusuario={
         idUsuario: idUsuarioLogin,
+        correo: usuarioR.correo,
+        usuario: usuarioR.usuario,
         nombre_completo: document.getElementById("nombre_completo_cambio").value,
-        correo: document.getElementById("correo_cambio").value,
-        usuario: document.getElementById("usuario_cambio").value,
         contrasena: document.getElementById("contrasena_cambio").value,
         confcontrasena: document.getElementById("confcontrasena_cambio").value
 
@@ -311,16 +296,13 @@ function verificar_cambiarDatos() {
     let actualizarusuario = {
         idUsuario: idUsuarioLogin,
         nombre_completo: document.getElementById("nombre_completo_cambio").value,
-        correo: document.getElementById("correo_cambio").value,
-        usuario: document.getElementById("usuario_cambio").value,
         contrasena: document.getElementById("contrasena_cambio").value,
         confcontrasena: document.getElementById("confcontrasena_cambio").value
 
 
     }
-    var datos = [actualizarusuario.nombre_completo, actualizarusuario.correo, actualizarusuario.usuario, actualizarusuario.contrasena, actualizarusuario.confcontrasena];
-
-    re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var datos = [actualizarusuario.nombre_completo,actualizarusuario.contrasena,actualizarusuario.confcontrasena];
+    
     for (var i = 0; i < datos.length; i++) {
         if (datos[i].length == 0) {
             alert("Porfavor ingresar todos los datos");
@@ -330,10 +312,11 @@ function verificar_cambiarDatos() {
             alert("Las contraseñas no coinciden");
             return false;
         }
-        if (!re.exec(actualizarusuario.correo)) {
-            alert('Correo no valido');
+        if(contrasena.value.length<8){
+            alert("la contrasena debe contener 8 caracteres como minimo");
             return false;
-        }
+        } 
+
 
     }
     return true;
@@ -343,14 +326,18 @@ function verificar_cambiarDatos() {
 function mostrar_Datos_Mascota() {
 
 
-    //alert(idUsuarioLogin);
-    var datos_Mascota = JSON.parse(localStorage.getItem("Mascota " + idUsuarioLogin));
-    var datos_Mascota_Nombre = datos_Mascota.nombre_Mascota;
-    var objetivoMascotaNombre = document.getElementById("datos_mascota");
-    objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
-    var datos_Mascota_Raza = datos_Mascota.raza;
-    var objetivoMascotaRaza = document.getElementById("datos_mascota_raza");
-    objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
+   //alert(idUsuarioLogin);
+      var datos_Mascota= JSON.parse(localStorage.getItem("Mascota "+idUsuarioLogin));
+            var datos_Mascota_Nombre= datos_Mascota.nombre_Mascota;
+            var objetivoMascotaNombre= document.getElementById("datos_mascota");
+                objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
+    var datos_Mascota_Raza= datos_Mascota.raza;
+            var objetivoMascotaRaza= document.getElementById("datos_mascota_raza");
+                objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
+
+        const recentImagenDataurl = localStorage.getItem("imagen_Mascota "+idUsuarioLogin);
+     
+        document.querySelector("#foto_perfil").setAttribute("src", recentImagenDataurl);
 }
 
 function mostrar_Datos_Perfil() {
@@ -368,3 +355,41 @@ function mostrar_Datos_Perfil() {
 
 
 }
+
+function guardarImagen(){
+    
+    document.querySelector("#miArchivo").addEventListener("change", function (){
+
+    const reader = new FileReader();
+    //idMascota
+
+    reader.addEventListener("load", () =>{
+    localStorage.setItem("imagen_Mascota "+indice, reader.result);
+
+    const recentImagenDataurl = localStorage.getItem("imagen_Mascota "+idUsuarioLogin);
+ 
+    document.querySelector("#imgVista").setAttribute("src", recentImagenDataurl);
+    //document.querySelector("#foto_perfil").setAttribute("src", recentImagenDataurl);
+     
+    });
+
+
+     reader.readAsDataURL(this.files[0]);
+     validarGuardarImg=1;
+     
+
+    return true,validarGuardarImg;
+  });
+ }
+
+
+
+    
+        
+        
+         
+       
+    
+    
+         
+ 
