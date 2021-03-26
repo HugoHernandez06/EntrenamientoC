@@ -1,9 +1,9 @@
 src = "https://code.jquery.com/jquery-3.6.0.js";
 
-var contU=idUsuario=idUsuarioLogin=1;
-var contM=idMascota=idMascotaLogin=1;
-var todosUsuarios=[];
-var todasMascotas=[];
+var contU = idUsuario = idUsuarioLogin = 1;
+var contM = idMascota = idMascotaLogin = 1;
+var todosUsuarios = [];
+var todasMascotas = [];
 
 $(document).ready(function () {
     //You might want to do if check to see if localstorage set for theImage here
@@ -32,11 +32,6 @@ $(document).ready(function () {
         reader.readAsDataURL(file); //attempts to read the file in question.
     });
 });
-
-
-
-
-
 
 
 //registrar Usuarios
@@ -104,36 +99,30 @@ function verificar_Datos_Usuario() {
             alert('Correo no valido');
             return false;
         }
-        if(contrasena.value.length<8){
+        if (contrasena.value.length < 8) {
             alert("la contrasena debe contener 8 caracteres como minimo");
             return false;
-        } if (JSON.parse(localStorage.getItem(todosUsuarios[i]))) {
+        }
+        if (JSON.parse(localStorage.getItem(todosUsuarios[i]))) {
             var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
 
-            
-            if(usuarioR.usuario==usuario.value){
+
+            if (usuarioR.usuario == usuario.value) {
                 alert("ya existe un usuario con este nombre");
                 return false;
-  
+
             }
-            if(usuarioR.correo==correo.value){
+            if (usuarioR.correo == correo.value) {
                 alert("Ya existe una cuenta con este correo");
                 return false;
             }
 
-            }
-        
-    return true;
+        }
+
+        return true;
 
     }
 }
-
-
-
-
-    
-
-
 
 
 //registrar Mascotas
@@ -147,13 +136,13 @@ function registro_Mascota() {
         raza: document.getElementById("raza").value
 
     }
-    idMascota=contM;
+    idMascota = contM;
     localStorage.setItem("Mascota " + contM, JSON.stringify(Mascota));
     contM++;
 
     llenar_Mascotas();
 
-    return idMascota,true;
+    return idMascota, true;
 }
 //verificar datos ingresado para registro de mascota
 
@@ -191,7 +180,7 @@ function anadir_Mascota() {
 
     llenar_Mascotas();
 
-    return 
+    return
 
 }
 
@@ -229,27 +218,24 @@ function acceso() {
             var usuarioR = JSON.parse(localStorage.getItem(todosUsuarios[i]));
             var mascotaR = JSON.parse(localStorage.getItem(todasMascotas[i]));
 
-            
-            if(usuarioN == usuarioR.usuario && contrasenaN==usuarioR.contrasena){
-               // alert(mascotaR.idUsuario);
+
+            if (usuarioN == usuarioR.usuario && contrasenaN == usuarioR.contrasena) {
+                // alert(mascotaR.idUsuario);
                 //alert(usuarioR.idUsuario);
-                for(var i =0; i<idUsuario; i++){
-                    if(mascotaR.idUsuario==usuarioR.idUsuario){
+                for (var i = 0; i < idUsuario; i++) {
+                    if (mascotaR.idUsuario == usuarioR.idUsuario) {
                         idUsuarioLogin = usuarioR.idUsuario;
-                        idMascotaLogin=usuarioR.idUsuario;
-                    
-                        return idUsuarioLogin,true;
+                        idMascotaLogin = usuarioR.idUsuario;
+
+                        return idUsuarioLogin, true;
+                    }
+
                 }
-                
-                }
-                
-                    
-                    
-                
-                
-            }else{
-                
-                if(i==id){
+
+
+            } else {
+
+                if (i == id) {
                     alert("Los datos no estan corretos");
                     return false;
                 }
@@ -267,77 +253,73 @@ function acceso() {
 }
 
 
+function verificar_Datos_Ajustes() {
 
 
+    var usuario_Registrado = JSON.parse(localStorage.getItem("usuario " + idUsuarioLogin));
+    var confirmar_usuario = document.getElementById("usuario_ajustes");
 
-function verificar_Datos_Ajustes(){
 
+    if (confirmar_usuario.value == usuario_Registrado.usuario) {
 
-        var usuario_Registrado= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
-        var confirmar_usuario=document.getElementById("usuario_ajustes");
-       
+        var clave_ajustes = document.getElementById("clave_ajustes");
+        var confirmar_clave_ajustes = document.getElementById("confirmar_clave_ajustes");
 
-        if (confirmar_usuario.value == usuario_Registrado.usuario) {
+        if (clave_ajustes.value == confirmar_clave_ajustes.value) {
 
-            var clave_ajustes = document.getElementById("clave_ajustes");
-            var confirmar_clave_ajustes = document.getElementById("confirmar_clave_ajustes");
+            if (clave_ajustes.value == usuario_Registrado.contrasena) {
+                alert("datos correctos");
 
-            if (clave_ajustes.value == confirmar_clave_ajustes.value) {
-
-                if (clave_ajustes.value == usuario_Registrado.contrasena) {
-                    alert("datos correctos");
-                   
-                    return true;
-                } else {
-                    alert("Contraseña incorrecta");
-                    return false;
-                }
-
+                return true;
             } else {
-                alert("las contraseñas no coinciden");
+                alert("Contraseña incorrecta");
+                return false;
             }
-        }else {
+
+        } else {
+            alert("las contraseñas no coinciden");
+        }
+    } else {
         alert("El usuario no es correcto");
         return false;
     }
 
 
-  }
-    
+}
 
 
-function cambiarDatos(){
+function cambiarDatos() {
 
-     
-    let actualizarusuario={
+
+    let actualizarusuario = {
         idUsuario: idUsuarioLogin,
         nombre_completo: document.getElementById("nombre_completo_cambio").value,
         correo: document.getElementById("correo_cambio").value,
         usuario: document.getElementById("usuario_cambio").value,
         contrasena: document.getElementById("contrasena_cambio").value,
         confcontrasena: document.getElementById("confcontrasena_cambio").value
-        
-        
+
+
     }
 
-    localStorage.setItem("usuario "+idUsuarioLogin, JSON.stringify(actualizarusuario) );
+    localStorage.setItem("usuario " + idUsuarioLogin, JSON.stringify(actualizarusuario));
 
     return true;
 }
 
-function verificar_cambiarDatos(){
-    let actualizarusuario={
+function verificar_cambiarDatos() {
+    let actualizarusuario = {
         idUsuario: idUsuarioLogin,
         nombre_completo: document.getElementById("nombre_completo_cambio").value,
         correo: document.getElementById("correo_cambio").value,
         usuario: document.getElementById("usuario_cambio").value,
         contrasena: document.getElementById("contrasena_cambio").value,
         confcontrasena: document.getElementById("confcontrasena_cambio").value
-        
-        
+
+
     }
-    var datos = [actualizarusuario.nombre_completo,actualizarusuario.correo,actualizarusuario.usuario,actualizarusuario.contrasena,actualizarusuario.confcontrasena];
-    
+    var datos = [actualizarusuario.nombre_completo, actualizarusuario.correo, actualizarusuario.usuario, actualizarusuario.contrasena, actualizarusuario.confcontrasena];
+
     re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     for (var i = 0; i < datos.length; i++) {
         if (datos[i].length == 0) {
@@ -358,32 +340,31 @@ function verificar_cambiarDatos(){
 }
 
 
+function mostrar_Datos_Mascota() {
 
-function mostrar_Datos_Mascota(){
 
-
-   //alert(idUsuarioLogin);
-      var datos_Mascota= JSON.parse(localStorage.getItem("Mascota "+idUsuarioLogin));
-            var datos_Mascota_Nombre= datos_Mascota.nombre_Mascota;
-            var objetivoMascotaNombre= document.getElementById("datos_mascota");
-                objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
-    var datos_Mascota_Raza= datos_Mascota.raza;
-            var objetivoMascotaRaza= document.getElementById("datos_mascota_raza");
-                objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
+    //alert(idUsuarioLogin);
+    var datos_Mascota = JSON.parse(localStorage.getItem("Mascota " + idUsuarioLogin));
+    var datos_Mascota_Nombre = datos_Mascota.nombre_Mascota;
+    var objetivoMascotaNombre = document.getElementById("datos_mascota");
+    objetivoMascotaNombre.innerHTML = datos_Mascota_Nombre;
+    var datos_Mascota_Raza = datos_Mascota.raza;
+    var objetivoMascotaRaza = document.getElementById("datos_mascota_raza");
+    objetivoMascotaRaza.innerHTML = datos_Mascota_Raza;
 }
 
-function mostrar_Datos_Perfil(){
+function mostrar_Datos_Perfil() {
 
-    var datos_Usuario= JSON.parse(localStorage.getItem("usuario "+idUsuarioLogin));
-        var dato_nombre=datos_Usuario.nombre_completo;
-        var objetivoUsuarioNombre=document.getElementById("nombre_perfil");
-            objetivoUsuarioNombre.innerHTML = dato_nombre;
-    var dato_usuario=datos_Usuario.usuario;
-        var objetivoUsuarioUsuario=document.getElementById("usuario_perfil");
-        objetivoUsuarioUsuario.innerHTML = dato_usuario;
-    var dato_correo=datos_Usuario.correo;
-        var objetivoUsuarioCorreo=document.getElementById("correo_perfil");
-        objetivoUsuarioCorreo.innerHTML = dato_correo;
+    var datos_Usuario = JSON.parse(localStorage.getItem("usuario " + idUsuarioLogin));
+    var dato_nombre = datos_Usuario.nombre_completo;
+    var objetivoUsuarioNombre = document.getElementById("nombre_perfil");
+    objetivoUsuarioNombre.innerHTML = dato_nombre;
+    var dato_usuario = datos_Usuario.usuario;
+    var objetivoUsuarioUsuario = document.getElementById("usuario_perfil");
+    objetivoUsuarioUsuario.innerHTML = dato_usuario;
+    var dato_correo = datos_Usuario.correo;
+    var objetivoUsuarioCorreo = document.getElementById("correo_perfil");
+    objetivoUsuarioCorreo.innerHTML = dato_correo;
 
 
 }

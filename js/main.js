@@ -8,9 +8,9 @@ var btn_entrenamiento;
 var btn_cuidados;
 var btn_basico;
 var btn_dieta;
-var btn_misMascotas;
+//var btn_misMascotas;
 var btn_trucos;
-var btn_añadirMascota, btn_guardarM;
+//var btn_añadirMascota, btn_guardarM;
 var btn_ajustes;
 var btn_ajustesCuenta;
 var btn_cerrarSecion;
@@ -38,14 +38,14 @@ function crearReferencias() {
   entrenamiento = document.getElementById("entrenamiento");
   basico = document.getElementById("basico");
   trucos = document.getElementById("trucos");
-  misMascotas = document.getElementById("misMascotas");
-  añadirMascota = document.getElementById("añadirMascota");
+  //misMascotas = document.getElementById("misMascotas");
+  //añadirMascota = document.getElementById("añadirMascota");
   ajustes = document.getElementById("ajustes");
   ajustesCuenta = document.getElementById("ajustesCuenta");
   cambioDatos = document.getElementById("cambioDatos");
   acercade = document.getElementById("acercaDe");
 
-  secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, misMascotas, añadirMascota, ajustes, ajustesCuenta, cambioDatos, dieta, basico, trucos, acercaDe];
+  secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, /*misMascotas, añadirMascota*/ , ajustes, ajustesCuenta, cambioDatos, dieta, basico, trucos, acercaDe];
 
   btn_login = document.getElementById("btn_login");
   btn_registro = document.getElementById("btn_registro");
@@ -64,10 +64,10 @@ function crearReferencias() {
   btn_cuidados = document.getElementById("btn_cuidados");
   btn_basico = document.getElementById("btn_basico");
   btn_dieta = document.getElementById("btn_dieta");
-  btn_misMascotas = document.getElementById("btn_misMascotas");
+  //btn_misMascotas = document.getElementById("btn_misMascotas");
   btn_trucos = document.getElementById("btn_trucos");
-  btn_añadirMascota = document.getElementById("btn_añadirMascota");
-  btn_guardarM = document.getElementById("btn_guardarM");
+  //btn_añadirMascota = document.getElementById("btn_añadirMascota");
+  //btn_guardarM = document.getElementById("btn_guardarM");
   btn_ajustes = document.getElementById("btn_ajustes");
   btn_ajustesCuenta = document.getElementById("btn_ajustesCuenta");
   btn_cerrarSecion = document.getElementById("btn_cerrarSecion");
@@ -112,6 +112,13 @@ function agregarEnventos() {
     }
   });
 
+  $('.container_card').on('click', function () {
+    $('.card').toggleClass('flipped');
+  });
+
+  $('.container_card2').on('click', function () {
+    $('.card2').toggleClass('flipped');
+  });
 
   btn_volver1.addEventListener("click", () => {
     irA(registro);
@@ -122,9 +129,9 @@ function agregarEnventos() {
   btn_volver5.addEventListener("click", () => {
     irA(ajustesCuenta);
   });
-  btn_volver6.addEventListener("click", () => {
-    irA(misMascotas);
-  });
+  //btn_volver6.addEventListener("click", () => {
+  //irA(misMascotas);
+  //});
   btn_volver7.addEventListener("click", () => {
     irA(inicio);
   });
@@ -140,21 +147,21 @@ function agregarEnventos() {
   btn_dieta.addEventListener("click", () => {
     irA(dieta);
   });
-  btn_misMascotas.addEventListener("click", () => {
-    irA(misMascotas);
-  });
+  //btn_misMascotas.addEventListener("click", () => {
+  //irA(misMascotas);
+  //});
   btn_trucos.addEventListener("click", () => {
     irA(trucos);
   });
-  btn_añadirMascota.addEventListener("click", () => {
-    irA(añadirMascota);
-  });
+  //btn_añadirMascota.addEventListener("click", () => {
+  //irA(añadirMascota);
+  //});
   btn_acercade.addEventListener("click", () => {
     irA(acercaDe);
   });
 
 
-  btn_guardarM.addEventListener("click", () => {
+  /*btn_guardarM.addEventListener("click", () => {
 
     if (verificar_Datos_Agregar_Mascota() == true) {
       anadir_Mascota();
@@ -162,7 +169,7 @@ function agregarEnventos() {
     }
 
 
-  });
+  });*/
 
 
   btn_ajustes.addEventListener("click", () => {
@@ -178,23 +185,22 @@ function agregarEnventos() {
   btn_cambioDatos.addEventListener("click", () => {
 
     if (verificar_Datos_Ajustes() == true) {
-      
+
       irA(cambioDatos);
-      
-      
-    
+
+
     }
   });
 
   btn_guardarCD.addEventListener("click", () => {
 
-    if(verificar_cambiarDatos()==true){
-      if(cambiarDatos()==true){
+    if (verificar_cambiarDatos() == true) {
+      if (cambiarDatos() == true) {
         irA(inicio);
       }
-      
+
     }
-    
+
   });
 
 
@@ -204,7 +210,7 @@ function agregarEnventos() {
     });
 
   }
-  for (var i = 0; i <= 4; i++) {
+  for (var i = 0; i <= 3; i++) {
     btn_volver2[i].addEventListener("click", () => {
       irA(inicio);
     });
@@ -231,4 +237,3 @@ function irA(seccion) {
   ocultarSecciones();
   seccion.classList.remove("ocultar");
 }
-     
