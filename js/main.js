@@ -92,6 +92,10 @@ function agregarEnventos() {
      
       mostrar_Datos_Mascota();
       mostrar_Datos_Perfil();
+
+      
+
+
       irA(inicio);
     }
   });

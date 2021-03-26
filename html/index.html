@@ -10,18 +10,19 @@
    </head>
    <!--splash-->
    <section id="splash">
-      <a><img src="../img/Logo-1_Happy-Woof.png" alt="splash"></a>        
+      <a><img src="../img/Logo-1-_-Happy-Woof.png" alt="splash"></a>        
    </section>
    <!--menu login-->
    <section id="menuLogin" class="ocultar">
 
       <div class="panel-central-img">
-         <img src="../img/Logo-1_Happy-Woof.png"  width="200" height="200">
+         <img src="../img/Logo-1-_-Happy-Woof.png"  width="200" height="200">
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central-img"></div>
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_login" >Login</a>
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_registro" >Registro</a>
       </div>
    </section>
@@ -34,16 +35,20 @@
          </nav>
       </div>
       <div class="panel-central-img">
-         <a><img src="../img/Logo-1_Happy-Woof.png"  ></a>   
+         <a><img src="../img/Logo-1-_-Happy-Woof.png"  ></a>   
+      </div>
+      <div class="panel-central-reducido"></div>
+      <div class="panel-central-reducido">
+         <input class="type_write" type="text" placeholder="Usuario" id="Usuario">
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Usuario" id="Usuario">
+         <input class="type_write" type="password"  placeholder="contraseña"  id="Clave">
       </div>
-      <div class="panel-central-reducido">
-         <input type="password"  placeholder="Password"  id="Clave">
-      </div>
-      <div class="panel-central-reducido">
-         <a class="boton" href="javascript:void(0);" id="btn_enviar">Enviar</a>
+      <br>
+      <br>
+      <div class="panel-central">
+         <a class="boton" href="javascript:void(0);"  id="btn_enviar">Enviar</a>
+
       </div>
    </section>
    <!--registro-->
@@ -55,24 +60,26 @@
          </nav>
       </div>
       <div class="panel-central-img">
-         <a><img src="../img/Logo-1_Happy-Woof.png" alt="splash" ></a>
+         <a><img src="../img/Logo-1-_-Happy-Woof.png" alt="splash" ></a>
+      </div>
+      <div class="panel-central-reducido"></div>
+      <div class="panel-central-reducido">
+         <input type="text" class="type_write" placeholder="Nombre Completo" name="nombre_completo" id="nombre_completo" required>
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Nombre Completo" name="nombre_completo" id="nombre_completo" required>
+         <input type="text" class="type_write" placeholder="Correo Electronico"  name="correo" id="correo" required>
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Correo Electronico"  name="correo" id="correo" required>
+         <input type="text" class="type_write" placeholder="Usuario" name="usuario" id="usuario" required>
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Usuario" name="usuario" id="usuario" required>
+         <input type="password" class="type_write" placeholder="Contraseña" name="contrasena" id="contrasena" required>
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Contraseña" name="contrasena" id="contrasena" required>
+         <input type="password" class="type_write" placeholder="Confirmar Contraseña" name="confcontrasena" id="confcontrasena" required>
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Confirmar Contraseña" name="confcontrasena" id="confcontrasena" required>
-      </div>
-      <div class="panel-central-reducido">
+         <div class="panel-central-reducido"></div>
          <a  class="boton" href="javascript:void(0);" id="btn_enviar1"  >Guardar</a>
       </div>
    </section>
@@ -83,31 +90,31 @@
             arrow_back
             </span></a>
          </nav>
-      </div>
-      <div class="panel-central-reducido">
-         <h2>Registra tu mascota</h2>
+         <center><h1 class="titulo">REGISTRO DE MASCOTA</h1></center>
       </div>
       <div class="panel-central-img">
-         <img src="" id="imgVista" width="150" height="100">
-         <input type="file" id="miArchivo">
-         <h3>añadir foto</h3>
+         <img src="" class="imagen_perfil" id="imgVista" width="100" height="100">
+         <br>
+         <input type="file" class="seleccionar_archivo" id="miArchivo">
        
       </div>
+      <div class="panel-central"></div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
+         <input type="text"  class="type_write" placeholder="Añadir Nombre" name="nombre_Mascota" id="nombre_Mascota">
       </div>
       <div class="panel-central-reducido">
-         <input type="number"  placeholder="Añadir Edad En Meses"  name="edad" id="edad">
+         <input type="number" class="type_write" placeholder="Añadir Edad En Meses"  name="edad" id="edad">
       </div>
       <div class="panel-central-reducido">
-         <select name="raza" id="raza" >
-            <option value="">Añadir Raza......................</option>
+         <select name="raza" class="type_write_select" id="raza" >
+            <option value="">Añadir Raza</option>
             <option value="Criollo">Criollo </option>
             <option value="Pitbull">Pitbull</option>
             <option value="Beagle">Beagle</option>
             <option value="Pastor Aleman">Pastor Aleman</option>
          </select>
       </div>
+      <div class="panel-central-reducido"></div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_enviar2">Guardar</a>
       </div>
@@ -119,19 +126,20 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">CAMBIAR DATOS</h1></center>
       </div>
       <div class="panel-central-img">
-         <a><img src="../img/Logo-1_Happy-Woof.png" alt=""></a>       
+         <a><img src="../img/Logo-1-_-Happy-Woof.png" alt=""></a>       
       </div>
       <div class="panel-central-reducido">
          <!--label type="text" placeholder="" id="objetivoUsuario"> </label-->
-         <input type="text"  placeholder="Nombre Completo"  id="nombre_completo_cambio" >
+         <input type="text" class="type_write" placeholder="Nombre Completo"  id="nombre_completo_cambio" >
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Contraseña"  id="contrasena_cambio" >
+         <input type="password" class="type_write" placeholder="Contraseña"  id="contrasena_cambio" >
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Confirmar Contraseña"  id="confcontrasena_cambio" >
+         <input type="password" class="type_write" placeholder="Confirmar Contraseña"  id="confcontrasena_cambio" >
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_guardarCD">Guardar</a>
@@ -144,24 +152,27 @@
             settings</span></a>
          </nav>
       </div>
+      <div class="panel-central-reducido"></div>
       <div class="panel-central">
          <br>
-      <img src="" id="foto_perfil" width="150" height="100">
+      <img src="" id="foto_perfil" width="200" height="200">
       </div>
+      <div class="panel-central"></div>
       <div class="panel-central">
          <br>
          <h4><label id="datos_mascota"></label>/<label id="datos_mascota_raza"></label></h4>
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central-reducido"></div>
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_entrenamiento">Entrenamiento</a>
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_cuidados">Cuidados</a>
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_dieta">Dieta</a>
       </div>
-      <div class="panel-central-reducido">
+      <div class="panel-central">
          <a class="boton" href="javascript:void(0);" id="btn_acercade">Acerca de</a>
       </div>
       <!--<div class="panel-central-img">
@@ -175,9 +186,9 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">CUIDADOS</h1></center>
       </div>
-      <br>
-      <h1>Cuidados</h1>
+      <div class="panel-central-reducido"></div>
       <div class="padre">
       <div class="container_card">
          <div class="card">
@@ -195,6 +206,9 @@
             <div class="back">Adios mundo</div>
          </div>
       </div>
+   </div>
+   <div class="panel-central-img">
+      <img src="../img/Cuidados-_-Happy-Woof.png" >
    </div>
    </section>
    <!--dieta-->
@@ -205,9 +219,9 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">DIETA</h1></center>
       </div>
-      <br>
-      <h1>Dieta</h1>
+      <div class="panel-central-reducido"></div>
       <div class="padre">
       <div class="container_card">
          <div class="card">
@@ -226,6 +240,9 @@
          </div>
       </div>
    </div>
+   <div class="panel-central-img">
+      <img src="../img/Dieta-_-Happy-Woof.png" >
+   </div>
    </section>
    <!--entrenamiento-->
    <section id="entrenamiento" class="ocultar">
@@ -234,17 +251,17 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">ENTRENAMIENTO</h1></center>
       </div>
-      <br>
-      <h1>Entrenamiento</h1>
-      <div class="panel-central-reduciodo">
-         <a><img src="../img/dog-icon.png" alt="" ></a>   
+      <div class="panel-central-img">
+         <a><img src="../img/Basico-_-Happy-Woof.png" alt="" ></a>   
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_basico">Basico</a>
       </div>
-      <div class="panel-central">
-         <a><img src="../img/Puppy-2-icon.png" alt="splash" ></a>    
+      <div class="panel-central"></div>
+      <div class="panel-central-img">
+         <a><img src="../img/Trucos-_-Happy-Woof.png" alt="splash" ></a>    
       </div>
       <div class="panel-central-reducido">
       <a class="boton" href="javascript:void(0);" id="btn_trucos">Trucos</a>
@@ -257,9 +274,9 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">BÁSICO</h1></center>
       </div>
-      <br>
-      <h1>Basico</h1>
+      <div class="panel-central-reducido"></div>
       <div class="padre">
       <div class="container_card">
          <div class="card">
@@ -277,6 +294,9 @@
             <div class="back">Adios mundo</div>
          </div>
       </div>
+   </div>
+   <div class="panel-central-img">
+      <img src="../img/Basico-_-Happy-Woof.png" >
    </div>
    </section>
    <!--trucos-->
@@ -286,9 +306,9 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">TRUCOS</h1></center>
       </div>
-      <br>
-      <h1>Trucos</h1>
+      <div class="panel-central-reducido"></div>
       <div class="padre">
       <div class="container_card">
          <div class="card">
@@ -306,6 +326,9 @@
             <div class="back">Adios mundo</div>
          </div>
       </div>
+   </div>
+   <div class="panel-central-img">
+      <img src="../img/Trucos-_-Happy-Woof.png" >
    </div>
    </section>
    <!--mismascotas
@@ -378,13 +401,22 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">AJUSTES</h1></center>
       </div>
-      <div class="panel-central-img">
-         <h2>Ajustes</h2>
-         <h3>Usuario: <label id="usuario_perfil"></label></h3>
-         <h3>Nombre: <label id="nombre_perfil"></label></h3>
-         <h3>Correo: <label id="correo_perfil"></label></h3>
+      <br>
+      <div class="panel-central-img2">
+        <img src="../img/Usuario-_-Happy-Woof.jpg"width="70" height="70" class="imagen_ajustes"> 
+        <h3>Usuario: <label id="usuario_perfil"></label></h3>
       </div>
+      <div class="panel-central-img2">
+        <img src="../img/Nombre-_-Happy-Woof.jpg"width="70" height="70" class="imagen_ajustes"> 
+        <h3> Nombre: <label id="nombre_perfil"></label></h3>
+      </div>
+        <div class="panel-central-img2">
+         <img src="../img/Correo-_-Happy-Woof.jpg"width="70" height="70" class="imagen_ajustes"> 
+        <h3> Correo: <label id="correo_perfil"></label></h3>
+        </div>
+         <div class="panel-central-reducido"></div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);"id="btn_ajustesCuenta">Cuenta</a>
       </div>
@@ -399,18 +431,19 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">CONFIRMAR DATOS</h1></center>
       </div>
       <div class="panel-central-img">
-         <a><img src="../img/Logo-1_Happy-Woof.png" alt="Login" ></a>   
+         <a><img src="../img/Logo-1-_-Happy-Woof.png" alt="Login" ></a>   
       </div>
       <div class="panel-central-reducido">
-         <input type="text"  placeholder="Usuario" id="usuario_ajustes">
+         <input type="text" class="type_write" placeholder="Usuario" id="usuario_ajustes">
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Contraseña"  id="clave_ajustes">
+         <input type="password"  class="type_write" placeholder="Contraseña"  id="clave_ajustes">
       </div>
       <div class="panel-central-reducido">
-         <input type="password"  placeholder="Confirmar contraseña"  id="confirmar_clave_ajustes">
+         <input type="password" class="type_write"  placeholder="Confirmar contraseña"  id="confirmar_clave_ajustes">
       </div>
       <div class="panel-central-reducido">
          <a class="boton" href="javascript:void(0);" id="btn_cambioDatos">Enviar</a>
@@ -423,18 +456,23 @@
             arrow_back
             </span></a>
          </nav>
+         <center><h1 class="titulo">ACERCA DE</h1></center>
       </div>
-      <div class="panel-central-reducido">
-         <h1>Acerca de</h1>
-      </div>
+
+      
       <div class="panel-central-reducido">
          <br>
          <h3>Esta aplicacion fue desarrollada con fines academicos por:</h3>
-         <br>
-         <h3>Andrés F. Parra: programador</h3>
-         <br>
-         <h3>Felipe Herrera: programador</h3>
-         <br>
-         <h3>Yenifer zanches: diseñadora</h3>
+      </div>
+      <br>
+      <br>
+      <div class="panel-central-img"> 
+         <h3><img src="../img/felipe.jpg" class="imagen_ajustes" width="70" height="70" > Felipe Herrera: Programador</h3>
+      </div>
+      <div class="panel-central-img"> 
+         <h3><img src="../img/Yeni.jpeg" class="imagen_ajustes"width="70" height="70" > Yenifer Sanchez: Diseñadora</h3>
+      </div>
+      <div class="panel-central-img"> 
+         <h3><img src="../img/Andres.PNG" class="imagen_ajustes" width="70" height="70"> Andrés F. Parra: Programador</h3>
       </div>
    </section>
