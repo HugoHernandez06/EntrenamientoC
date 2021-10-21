@@ -1,4 +1,4 @@
-var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, entrenamiento, basico, trucos, misMascotas, añadirMascota, ajustes, ajustesCuenta, cambioDatos;
+var splash, menuLogin, login, registro, registroMascota, inicio, cuidados, dieta, veterinaria, entrenamiento, basico, trucos, misMascotas, añadirMascota, ajustes, ajustesCuenta, cambioDatos;
 var secciones = [];
 var btn_login;
 var btn_registro;
@@ -8,6 +8,7 @@ var btn_entrenamiento;
 var btn_cuidados;
 var btn_basico;
 var btn_dieta;
+var btn_chatbot;
 //var btn_misMascotas;
 var btn_trucos;
 //var btn_añadirMascota, btn_guardarM;
@@ -35,6 +36,7 @@ function crearReferencias() {
   inicio = document.getElementById("inicio");
   cuidados = document.getElementById("cuidados");
   dieta = document.getElementById("dieta");
+  veterinaria = document.getElementById("veterinaria");
   entrenamiento = document.getElementById("entrenamiento");
   basico = document.getElementById("basico");
   trucos = document.getElementById("trucos");
@@ -45,7 +47,7 @@ function crearReferencias() {
   cambioDatos = document.getElementById("cambioDatos");
   acercade = document.getElementById("acercaDe");
 
-  secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, /*misMascotas, añadirMascota*/ , ajustes, ajustesCuenta, cambioDatos, dieta, basico, trucos, acercaDe];
+  secciones = [splash, menuLogin, login, registro, inicio, registroMascota, entrenamiento, cuidados, /*misMascotas, añadirMascota*/ , ajustes, ajustesCuenta, cambioDatos, dieta, veterinaria, basico, trucos, /*acercaDe*/];
 
   btn_login = document.getElementById("btn_login");
   btn_registro = document.getElementById("btn_registro");
@@ -64,6 +66,7 @@ function crearReferencias() {
   btn_cuidados = document.getElementById("btn_cuidados");
   btn_basico = document.getElementById("btn_basico");
   btn_dieta = document.getElementById("btn_dieta");
+  btn_chatbot = document.getElementById("btn_chatbot");
   //btn_misMascotas = document.getElementById("btn_misMascotas");
   btn_trucos = document.getElementById("btn_trucos");
   //btn_añadirMascota = document.getElementById("btn_añadirMascota");
@@ -153,6 +156,9 @@ function agregarEnventos() {
   });
   btn_dieta.addEventListener("click", () => {
     irA(dieta);
+  });
+  btn_chatbot.addEventListener("click", () => {
+    irA(veterinaria);
   });
   //btn_misMascotas.addEventListener("click", () => {
   //irA(misMascotas);
@@ -244,3 +250,4 @@ function irA(seccion) {
   ocultarSecciones();
   seccion.classList.remove("ocultar");
 }
+
